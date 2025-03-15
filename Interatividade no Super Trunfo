@@ -59,10 +59,14 @@ switch (escolhaJogador)
     printf("%u habitantes\n", cidade2populacao);
         if (cidade1populacao > cidade2populacao ) {
         printf("%s tem a maior população\n", cidade1nomeCidade); printf("%s venceu!\n", cidade1nomeCidade);
-        } else {
+        } 
+        else if (cidade1populacao == cidade2populacao ) {
+        printf("Deu empate!");
+        } 
+        else {
         printf("%s tem a maior população\n", cidade2nomeCidade); printf("%s venceu!\n", cidade2nomeCidade);
         }
-    break;
+        break;
     
     case 2:
     printf("Área de "); printf("%s: ", cidade1nomeCidade);
@@ -71,6 +75,9 @@ switch (escolhaJogador)
     printf("%2.f km2\n", cidade2area);
         if (cidade1area > cidade2area ) {
         printf("%s tem a maior área\n", cidade1nomeCidade); printf("%s venceu!\n", cidade1nomeCidade);
+        } 
+        else if (cidade1area == cidade2area ) {
+        printf("Deu empate!");
         } else {
         printf("%s tem a maior área\n", cidade2nomeCidade); printf("%s venceu!\n", cidade2nomeCidade);
         }
@@ -83,6 +90,9 @@ switch (escolhaJogador)
     printf("%.2f bilhões de reais\n", cidade2PIB);
         if (cidade1PIB > cidade2PIB ) {
         printf("%s tem o maior PIB\n", cidade1nomeCidade); printf("%s venceu!\n", cidade1nomeCidade);
+        } 
+        else if (cidade1PIB == cidade2PIB ) {
+        printf("Deu empate!");
         } else {
         printf("%s tem O maior PIB\n", cidade2nomeCidade); printf("%s venceu!\n", cidade2nomeCidade);
         }
@@ -95,6 +105,9 @@ switch (escolhaJogador)
     printf("%d\n", cidade2numeroPontosTuristicos);
         if (cidade1numeroPontosTuristicos > cidade2numeroPontosTuristicos ) {
         printf("%s tem o maior números de Pontos Turísticos\n", cidade1nomeCidade); printf("%s venceu!\n", cidade1nomeCidade);
+        }
+        else if (cidade1numeroPontosTuristicos == cidade2numeroPontosTuristicos ) {
+        printf("Deu empate!");
         } else {
         printf("%s tem o maior números de Pontos Turísticos\n", cidade2nomeCidade); printf("%s venceu!\n", cidade2nomeCidade);
         }
@@ -107,6 +120,9 @@ switch (escolhaJogador)
     printf("%.2f habitantes por km2\n", densidadec2);
         if (densidadeInvertidac1 > densidadeInvertidac2 ) {
         printf("%s tem a menor densidade populacional\n", cidade1nomeCidade); printf("%s venceu!\n", cidade1nomeCidade);
+        }
+        else if (densidadeInvertidac1 == densidadeInvertidac2 ) {
+        printf("Deu empate!");
         } else {
         printf("%s tem a menor Densidade Populacional\n", cidade2nomeCidade); printf("%s venceu!\n", cidade2nomeCidade);
         }
@@ -119,6 +135,9 @@ switch (escolhaJogador)
     printf("%.2f reais (R$) por habitante\n", pibPerCapitac2);
         if (pibPerCapitac1 > pibPerCapitac2 ) {
         printf("%s tem o maior PIB per capta\n", cidade1nomeCidade); printf("%s venceu!\n", cidade1nomeCidade);
+        }
+        else if (pibPerCapitac1 == pibPerCapitac2 ) {
+        printf("Deu empate!");
         } else {
         printf("%s tem o maior PIB per capta\n", cidade2nomeCidade); printf("%s venceu!\n", cidade2nomeCidade);
         }
