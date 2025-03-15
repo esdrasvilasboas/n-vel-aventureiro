@@ -1,2 +1,2 @@
-# n-vel-aventureiro
-menu interativo usando switch - escolher o atributo de comparação entre duas cartas de países-- decisão aninhadas (if-else dentro de if-else) para criar uma lógica de comparação mais complexa
+Este é um programa do tipo "Super Trunfo", que compara características de duas cidades distintas. 
+Sugere-se executá-lo no GDB Online Debugger (https://www.onlinegdb.com/). Acesse o site, selecione a linguagem C, apague qualquer código existente e cole o código fornecido. Em seguida, clique no botão "Run", e o menu interativo aparecerá no terminal, solicitando que você escolha um número de 1 a 6 para comparar os dados das cidades. Digite a opção desejada e pressione Enter para ver os resultados. Caso queira testar novamente, clique em "Run" novamente e escolha outra opção. Se necessário, edite os valores diretamente no código antes de executar.
