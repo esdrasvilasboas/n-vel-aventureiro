@@ -1,144 +1,131 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
 
-// Definindo uma estrutura para armazenar os dados da cidade
-struct Cidade {
-    char codigoCidade[100];
-    char nomeCidade[100];
-    unsigned int populacao;
-    float area;
-    float PIB;
-    int numeroPontosTuristicos;
-};
+//Definindo os dados das duas cidades duas cartas
 
 int main() {
-    struct Cidade cidade1, cidade2;
 
-    // Cadastro da primeira cidade
-    printf("\n--- Cadastro da Cidade 1 ---\n");
+    int escolhaJogador;
 
-    printf("Entre com o código da cidade: \n");
-    scanf(" %[^\n]s", cidade1.codigoCidade);
+//cidade 1
+    const char* cidade1nomeCidade = "Belo Horizonte";
+    int cidade1populacao = 2315560;
+    float cidade1area = 331;
+    float cidade1PIB = 105;
+    int cidade1numeroPontosTuristicos = 20;
+    
+//cidade 2
+    const char* cidade2nomeCidade = "Curitiba";
+    int cidade2populacao = 1773718;
+    float cidade2area = 336;
+    float cidade2PIB = 88;
+    int cidade2numeroPontosTuristicos = 10;
 
-    printf("Entre com o nome da cidade: \n");
-    scanf(" %[^\n]s", cidade1.nomeCidade);
-
-    printf("Entre com a população: \n");
-    scanf("%u", &cidade1.populacao);
-
-    printf("Entre com a área (em km²): \n");
-    scanf("%f", &cidade1.area);
-
-    printf("Entre com o PIB (em bilhões): \n");
-    scanf("%f", &cidade1.PIB);
-
-    printf("Entre com o número de pontos turísticos: \n");
-    scanf("%d", &cidade1.numeroPontosTuristicos);
-
-    // Cadastro da segunda cidade
-    printf("\n--- Cadastro da Cidade 2 ---\n");
-
-    printf("Entre com o código da cidade: \n");
-    scanf(" %[^\n]s", cidade2.codigoCidade);
-
-    printf("Entre com o nome da cidade: \n");
-    scanf(" %[^\n]s", cidade2.nomeCidade);
-
-    printf("Entre com a população: \n");
-    scanf("%u", &cidade2.populacao);
-
-    printf("Entre com a área (em km²): \n");
-    scanf("%f", &cidade2.area);
-
-    printf("Entre com o PIB (em bilhões): \n");
-    scanf("%f", &cidade2.PIB);
-
-    printf("Entre com o número de pontos turísticos: \n");
-    scanf("%d", &cidade2.numeroPontosTuristicos);
-
-    // Exibindo os dados da primeira cidade
-    printf("\n--- Dados da Cidade 1 ---\n");
-    printf("Código da cidade: %s\n", cidade1.codigoCidade);
-    printf("Nome da cidade: %s\n", cidade1.nomeCidade);
-    printf("População: %u habitantes\n", cidade1.populacao);
-    printf("Área: %.2f km²\n", cidade1.area);
-    printf("PIB: %.2f bilhões\n", cidade1.PIB);
-    printf("Número de pontos turísticos: %d\n", cidade1.numeroPontosTuristicos);
 
 // Cálculo da densidade populacional e densidade invertida
-    float densidadec1 = cidade1.populacao / cidade1.area;
+    float densidadec1 = cidade1populacao / cidade1area;
     float densidadeInvertidac1 = 1 / densidadec1;
 
-    printf("Densidade Populacional: %.2f habitantes por km²\n", densidadec1);
     
     // Cálculo do PIB per capita
-    float pibPerCapitac1 = (cidade1.PIB) / cidade1.populacao;
-    printf("PIB per Capita: %.2f\n", pibPerCapitac1);
-
-float somaAtributosc1 = cidade1.populacao 
-                        + cidade1.area 
-                        + (cidade1.PIB) 
-                        + cidade1.numeroPontosTuristicos 
-                        + densidadeInvertidac1;
-
-    printf("\nSoma de todos os atributos (incluindo densidade invertida): %.2f\n", somaAtributosc1);
-
-
-    // Exibindo os dados da segunda cidade
-    printf("\n--- Dados da Cidade 2 ---\n");
-    printf("Código da cidade: %s\n", cidade2.codigoCidade);
-    printf("Nome da cidade: %s\n", cidade2.nomeCidade);
-    printf("População: %u habitantes\n", cidade2.populacao);
-    printf("Área: %.2f km²\n", cidade2.area);
-    printf("PIB: %.2f bilhões\n", cidade2.PIB);
-    printf("Número de pontos turísticos: %d\n", cidade2.numeroPontosTuristicos);
-    printf("Densidade Populacional: %.2f habitantes por km²\n", cidade2.populacao / cidade2.area);
-    printf("PIB per Capita: %.2f\n", (cidade2.PIB) / cidade2.populacao);
-
+    float pibPerCapitac1 = (cidade1PIB * 1e9) / cidade1populacao;
+ 
 // Cálculo da densidade populacional e densidade invertida
-    float densidadec2 = cidade2.populacao / cidade2.area;
+    float densidadec2 = cidade2populacao / cidade2area;
     float densidadeInvertidac2 = 1 / densidadec2;
-
-    printf("Densidade Populacional: %.2f habitantes por km²\n", densidadec2);
     
     // Cálculo do PIB per capita
-    float pibPerCapitac2 = (cidade2.PIB) / cidade2.populacao;
-    printf("PIB per Capita: %.2f\n", pibPerCapitac2);
+    float pibPerCapitac2 = (cidade2PIB * 1e9) / cidade2populacao;
 
-float somaAtributosc2 = cidade2.populacao 
-                        + cidade2.area 
-                        + (cidade2.PIB) 
-                        + cidade2.numeroPontosTuristicos 
-                        + densidadeInvertidac2;
+//MENU INTERATIVO
 
-    printf("\nSoma de todos os atributos (incluindo densidade invertida): %.2f\n", somaAtributosc2);
+printf("Super Trunfo Belo Horizonte x Curitiba\n");
+    printf("Escolha o que vamos comparar entre Belo Horizonte e Curitiba :\n");
+    printf("1.População\n");
+    printf("2.Área\n");
+    printf("3.Pib\n");
+    printf("4.Número de Pontos Turísticos\n");
+    printf("5.Densidade Populacional Invertida\n");
+    printf("6.Pib per capta\n");
+    printf("Escolha: ");
+    scanf("%d", &escolhaJogador);
 
-// Compara População
-    if (cidade1.populacao > cidade2.populacao ) {
-        printf("%s tem a maior população\n", cidade1.nomeCidade);
-    } else {
-        printf("%s tem a maior população\n", cidade2.nomeCidade);
+// Escolhas e casos
+switch (escolhaJogador)
+    {
+    case 1:
+    printf("População de "); printf("%s: ", cidade1nomeCidade);
+    printf("%u habitantes.\n", cidade1populacao);
+    printf("População de "); printf("%s: ", cidade2nomeCidade);
+    printf("%u habitantes\n", cidade2populacao);
+        if (cidade1populacao > cidade2populacao ) {
+        printf("%s tem a maior população\n", cidade1nomeCidade); printf("%s venceu!\n", cidade1nomeCidade);
+        } else {
+        printf("%s tem a maior população\n", cidade2nomeCidade); printf("%s venceu!\n", cidade2nomeCidade);
+        }
+    break;
+    
+    case 2:
+    printf("Área de "); printf("%s: ", cidade1nomeCidade);
+    printf("%2.f km2\n", cidade1area);
+    printf("Área de "); printf("%s: ", cidade2nomeCidade);
+    printf("%2.f km2\n", cidade2area);
+        if (cidade1area > cidade2area ) {
+        printf("%s tem a maior área\n", cidade1nomeCidade); printf("%s venceu!\n", cidade1nomeCidade);
+        } else {
+        printf("%s tem a maior área\n", cidade2nomeCidade); printf("%s venceu!\n", cidade2nomeCidade);
+        }
+    break;
+
+case 3:
+    printf("PIB de "); printf("%s: ", cidade1nomeCidade);
+    printf("%.2f bilhões de reais\n", cidade1PIB);
+    printf("PIB de "); printf("%s: ", cidade2nomeCidade);
+    printf("%.2f bilhões de reais\n", cidade2PIB);
+        if (cidade1PIB > cidade2PIB ) {
+        printf("%s tem o maior PIB\n", cidade1nomeCidade); printf("%s venceu!\n", cidade1nomeCidade);
+        } else {
+        printf("%s tem O maior PIB\n", cidade2nomeCidade); printf("%s venceu!\n", cidade2nomeCidade);
+        }
+    break;
+
+case 4:
+    printf("Número de pontos turísticos de "); printf ("%s: ", cidade1nomeCidade);
+    printf("%d\n", cidade1numeroPontosTuristicos);
+    printf("Número de pontos turísticos de "); printf ("%s: ", cidade2nomeCidade);
+    printf("%d\n", cidade2numeroPontosTuristicos);
+        if (cidade1numeroPontosTuristicos > cidade2numeroPontosTuristicos ) {
+        printf("%s tem o maior números de Pontos Turísticos\n", cidade1nomeCidade); printf("%s venceu!\n", cidade1nomeCidade);
+        } else {
+        printf("%s tem o maior números de Pontos Turísticos\n", cidade2nomeCidade); printf("%s venceu!\n", cidade2nomeCidade);
+        }
+    break;
+
+case 5:
+    printf("Densidade Populacional de "); printf ("%s: ", cidade1nomeCidade);
+    printf("%.2f habitantes por km2\n", densidadec1);
+    printf("Densidade Populacional de "); printf ("%s: ", cidade2nomeCidade);
+    printf("%.2f habitantes por km2\n", densidadec2);
+        if (densidadeInvertidac1 > densidadeInvertidac2 ) {
+        printf("%s tem a menor densidade populacional\n", cidade1nomeCidade); printf("%s venceu!\n", cidade1nomeCidade);
+        } else {
+        printf("%s tem a menor Densidade Populacional\n", cidade2nomeCidade); printf("%s venceu!\n", cidade2nomeCidade);
+        }
+    break;
+
+case 6:
+    printf("PIB per capita de "); printf("%s: ", cidade1nomeCidade);
+    printf("%.2f reais (R$) por habitante\n", pibPerCapitac1);
+    printf("PIB per capita de "); printf("%s: ", cidade2nomeCidade);
+    printf("%.2f reais (R$) por habitante\n", pibPerCapitac2);
+        if (pibPerCapitac1 > pibPerCapitac2 ) {
+        printf("%s tem o maior PIB per capta\n", cidade1nomeCidade); printf("%s venceu!\n", cidade1nomeCidade);
+        } else {
+        printf("%s tem o maior PIB per capta\n", cidade2nomeCidade); printf("%s venceu!\n", cidade2nomeCidade);
+        }
+    break;
+
     }
-
- if (cidade1.area > cidade2.area)
-        printf("%s tem a maior área\n", cidade1.nomeCidade);
-    else
-        printf("%s tem a maior área\n", cidade2.nomeCidade);
-
-    if (cidade1.PIB > cidade2.PIB)
-        printf("%s tem o maior PIB\n", cidade1.nomeCidade);
-    else
-        printf("%s tem o maior PIB\n", cidade2.nomeCidade);
-
-    if (cidade1.numeroPontosTuristicos > cidade2.numeroPontosTuristicos)
-        printf("%s tem mais pontos turísticos\n", cidade1.nomeCidade);
-    else
-        printf("%s tem mais pontos turísticos\n", cidade2.nomeCidade);
-
-    if (densidadeInvertidac1 > densidadeInvertidac2)
-        printf("%s tem a maior densidade invertida\n", cidade1.nomeCidade);
-    else
-        printf("%s tem a maior densidade invertida\n", cidade2.nomeCidade);    
-
-
 return 0;
 }
