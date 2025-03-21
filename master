@@ -9,16 +9,16 @@ int main() {
 
 //cidade 1
     const char* cidade1nomeCidade = "Belo Horizonte";
-    int cidade1populacao = 2315560;
-    float cidade1area = 331;
-    float cidade1PIB = 105;
-    int cidade1numeroPontosTuristicos = 20;
+    int cidade1populacao = 10;
+    float cidade1area = 5;
+    float cidade1PIB = 5;
+    int cidade1numeroPontosTuristicos = 10;
     
 //cidade 2
     const char* cidade2nomeCidade = "Curitiba";
-    int cidade2populacao = 1773718;
-    float cidade2area = 336;
-    float cidade2PIB = 88;
+    int cidade2populacao = 10;
+    float cidade2area = 5;
+    float cidade2PIB = 5;
     int cidade2numeroPontosTuristicos = 10;
 
 
@@ -41,7 +41,7 @@ int main() {
 
 //Escolha 1
 
-printf("Super Trunfo Belo Horizonte x Curitiba\n");
+    printf("Super Trunfo Belo Horizonte x Curitiba\n");
     printf("Escolha duas características para comparar entre Belo Horizonte e Curitiba :\n");
     printf("Opção 1:\n");
     printf("1.População\n");
@@ -54,8 +54,7 @@ printf("Super Trunfo Belo Horizonte x Curitiba\n");
     scanf("%d", &escolhaJogador1);
 
 // Escolhas 2
-switch (escolhaJogador1)
-    {
+switch (escolhaJogador1) {
     case 1:
     printf("Opção 2:\n");
     printf("2.Área\n");
@@ -65,13 +64,238 @@ switch (escolhaJogador1)
     printf("6.Pib per capta\n");
     printf("Escolha: ");
     scanf("%d", &escolhaJogador2);
-    if escolhaJogador2 = 2 {
-        printf("Vamos comparar população e área");
-        } 
-        else if escolhaJogador2 = 3 {
-        printf("Vamos comparar população e PIB");
+        if (escolhaJogador2 == 2) {
+        printf("Ok! Então vamos comparar população e área de "); 
+        printf("%s ", cidade1nomeCidade); printf("e ");
+        printf("%s. \n", cidade2nomeCidade);
+        printf("População de "); printf("%s: ", cidade1nomeCidade);
+        printf("%u habitantes.\n", cidade1populacao);
+        printf("População de "); printf("%s: ", cidade2nomeCidade);
+        printf("%u habitantes\n", cidade2populacao);
+        printf("Área de "); printf("%s: ", cidade1nomeCidade);
+        printf("%2.f km2\n", cidade1area);
+        printf("Área de "); printf("%s: ", cidade2nomeCidade);
+        printf("%2.f km2\n", cidade2area);
+            if (cidade1populacao > cidade2populacao ) {
+            printf("%s tem a maior população\n", cidade1nomeCidade); 
+            printf("%s venceu no quesito população!\n", cidade1nomeCidade);
+            } 
+            if (cidade1populacao == cidade2populacao ) {
+            printf("Deu empate com relação à população!");
+            } 
+            if (cidade1populacao < cidade2populacao ) {
+            printf("%s tem a maior população\n", cidade2nomeCidade); 
+            printf("%s venceu no quesito população!\n", cidade2nomeCidade);
+            }
+            if (cidade1area > cidade2area ) {
+            printf("%s tem a maior área\n", cidade1nomeCidade); 
+            printf("%s venceu no quesito área!\n", cidade1nomeCidade);
+            } 
+            if (cidade1area == cidade2area ) {
+            printf("Deu empate com relação à área!");
+            } 
+            if (cidade1area < cidade2area ){
+            printf("%s tem a maior área\n", cidade2nomeCidade); 
+            printf("%s venceu no quesito área!\n", cidade2nomeCidade);
+            }
+            if ((cidade1populacao + cidade1area) > (cidade2populacao + cidade2area)) {
+            printf("%s tem a maior soma de população e área\n", cidade1nomeCidade); 
+            printf("%s venceu no quesito soma de população e área!\n", cidade1nomeCidade);
+            } 
+           if ((cidade1populacao + cidade1area) == (cidade2populacao + cidade2area)) {
+           printf("Deu empate com relação à soma da populção e área!");
+           } 
+           else if ((cidade1populacao + cidade1area) < (cidade2populacao + cidade2area)) {
+            printf("%s tem a maior soma de população e área\n", cidade2nomeCidade); 
+            printf("%s venceu no quesito soma de população e área!\n", cidade2nomeCidade);
+            } 
         }
-        break;
+        if (escolhaJogador2 == 3) {
+        printf("Ok! Então vamos comparar população e PIB de "); 
+        printf("%s ", cidade1nomeCidade); printf("e ");
+        printf("%s: \n", cidade2nomeCidade);
+        printf("População de "); printf("%s: ", cidade1nomeCidade);
+        printf("%u habitantes.\n", cidade1populacao);
+        printf("População de "); printf("%s: ", cidade2nomeCidade);
+        printf("%u habitantes\n", cidade2populacao);
+        printf("PIB de "); printf("%s: ", cidade1nomeCidade);
+        printf("%.2f bilhões de reais\n", cidade1PIB);
+        printf("PIB de "); printf("%s: ", cidade2nomeCidade);
+        printf("%.2f bilhões de reais\n", cidade2PIB);
+            if (cidade1populacao > cidade2populacao ) {
+            printf("%s tem a maior população\n", cidade1nomeCidade); 
+            printf("%s venceu no quesito população!\n", cidade1nomeCidade);
+            } 
+            if (cidade1populacao == cidade2populacao ) {
+            printf("Deu empate com relação à população!");
+            } 
+            if (cidade1populacao < cidade2populacao ) {
+            printf("%s tem a maior população\n", cidade2nomeCidade); 
+            printf("%s venceu no quesito população!\n", cidade2nomeCidade);
+            }
+            if (cidade1PIB > cidade2PIB ) {
+            printf("%s tem o maior PIB\n", cidade1nomeCidade); 
+            printf("%s venceu no quesito PIB!\n", cidade1nomeCidade);
+            } 
+            if (cidade1PIB == cidade2PIB ) {
+            printf("Deu empate no quesito PIB!");
+            } 
+            if (cidade1PIB < cidade2PIB ){
+            printf("%s tem O maior PIB\n", cidade2nomeCidade); 
+            printf("%s venceu no quesito PIB!\n", cidade2nomeCidade);
+            }
+            if ((cidade1populacao + cidade1PIB) > (cidade2populacao + cidade2PIB)) {
+            printf("%s tem a maior soma de população e PIB\n", cidade1nomeCidade); 
+            printf("%s venceu no quesito soma de população e PIB!\n", cidade1nomeCidade);
+            } 
+           if ((cidade1populacao + cidade1PIB) == (cidade2populacao + cidade2PIB)) {
+           printf("Deu empate com relação à soma da populção e PIB!");
+           } 
+           if ((cidade1populacao + cidade1PIB) < (cidade2populacao + cidade2PIB)) {
+            printf("%s tem a maior soma de população e PIB\n", cidade2nomeCidade); 
+            printf("%s venceu no quesito soma de população e PIB!\n", cidade2nomeCidade);
+            } 
+        } 
+        if (escolhaJogador2 == 4) {
+        printf("Ok! Então vamos comparar população e Número de Pontos Turísticos de "); 
+        printf("%s ", cidade1nomeCidade); printf("e ");
+        printf("%s: \n", cidade2nomeCidade);
+        printf("População de "); printf("%s: ", cidade1nomeCidade);
+        printf("%u habitantes.\n", cidade1populacao);
+        printf("População de "); printf("%s: ", cidade2nomeCidade);
+        printf("%u habitantes\n", cidade2populacao);
+        printf("Número de Pontos Turísticos de "); printf("%s: ", cidade1nomeCidade);
+        printf("%d\n", cidade1numeroPontosTuristicos);
+        printf("Número de Pontos Turísticos de "); printf("%s: ", cidade2nomeCidade);
+        printf("%d\n", cidade2numeroPontosTuristicos);
+            if (cidade1populacao > cidade2populacao ) {
+            printf("%s tem a maior população\n", cidade1nomeCidade); 
+            printf("%s venceu no quesito população!\n", cidade1nomeCidade);
+            } 
+            if (cidade1populacao == cidade2populacao ) {
+            printf("Deu empate com relação à população!");
+            } 
+            if (cidade1populacao < cidade2populacao ) {
+            printf("%s tem a maior população\n", cidade2nomeCidade); 
+            printf("%s venceu no quesito população!\n", cidade2nomeCidade);
+            }
+            if (cidade1numeroPontosTuristicos > cidade2numeroPontosTuristicos ) {
+            printf("%s tem mais pontos turísticos\n", cidade1nomeCidade); 
+            printf("%s venceu no quesito pontos turísticos!\n", cidade1nomeCidade);
+            } 
+            if (cidade1numeroPontosTuristicos == cidade2numeroPontosTuristicos ) {
+            printf("Deu empate no quesito pontos turísticos!");
+            } 
+            if (cidade1numeroPontosTuristicos < cidade2numeroPontosTuristicos ) {
+            printf("%s tem mais pontos turísticos\n", cidade2nomeCidade); 
+            printf("%s venceu no quesito pontos turísticos!\n", cidade2nomeCidade);
+            }
+            if ((cidade1populacao + cidade1numeroPontosTuristicos) > (cidade2populacao + cidade2numeroPontosTuristicos)) {
+            printf("%s tem a maior soma de população e pontos turísticos\n", cidade1nomeCidade); 
+            printf("%s venceu no quesito soma de população e pontos turísticos!\n", cidade1nomeCidade);
+            } 
+            if ((cidade1populacao + cidade1numeroPontosTuristicos) == (cidade2populacao + cidade2numeroPontosTuristicos)) {
+            printf("Deu empate com relação à soma da população e pontos turísticos!");
+            } 
+            if ((cidade1populacao + cidade1numeroPontosTuristicos) < (cidade2populacao + cidade2numeroPontosTuristicos)) {
+            printf("%s tem a maior soma de população e pontos turísticos\n", cidade2nomeCidade); 
+            printf("%s venceu no quesito soma de população e pontos turísticos!\n", cidade2nomeCidade);
+            } 
+        }
+        if (escolhaJogador2 == 5) {
+        printf("Ok! Então vamos comparar população e Densidade Populacional Invertida de "); 
+        printf("%s ", cidade1nomeCidade); printf("e ");
+        printf("%s: \n", cidade2nomeCidade);
+        printf("População de "); printf("%s: ", cidade1nomeCidade);
+        printf("%u habitantes.\n", cidade1populacao);
+        printf("População de "); printf("%s: ", cidade2nomeCidade);
+        printf("%u habitantes\n", cidade2populacao);
+        printf("Densidade Populacional Invertida de "); printf("%s: ", cidade1nomeCidade);
+        printf("%f\n", densidadeInvertidac1);
+        printf("Densidade Populacional Invertida de "); printf("%s: ", cidade2nomeCidade);
+        printf("%f\n", densidadeInvertidac2);
+        
+            if (cidade1populacao > cidade2populacao ) {
+            printf("%s tem a maior população\n", cidade1nomeCidade); 
+            printf("%s venceu no quesito população!\n", cidade1nomeCidade);
+            } 
+            if (cidade1populacao == cidade2populacao ) {
+            printf("Deu empate com relação à população!");
+            } 
+            if (cidade1populacao < cidade2populacao ) {
+            printf("%s tem a maior população\n", cidade2nomeCidade); 
+            printf("%s venceu no quesito população!\n", cidade2nomeCidade);
+            }
+            if (densidadeInvertidac1 > densidadeInvertidac2 ) {
+            printf("%s tem maior densidade populacional invertida\n", cidade1nomeCidade); 
+            printf("%s venceu no quesito densidade populacional invertida!\n", cidade1nomeCidade);
+            } 
+            if (densidadeInvertidac1 == densidadeInvertidac2 ) {
+            printf("Deu empate no quesito densidade populacional invertida!");
+            } 
+            if (densidadeInvertidac1 < densidadeInvertidac2 ) {
+            printf("%s tem maior densidade populacional invertida\n", cidade2nomeCidade); 
+            printf("%s venceu no quesito densidade populacional invertida!\n", cidade2nomeCidade);
+            }
+            if ((cidade1populacao + densidadeInvertidac1) > (cidade2populacao + densidadeInvertidac2)) {
+            printf("%s tem a maior soma de população e densidade populacional invertida\n", cidade1nomeCidade); 
+            printf("%s venceu no quesito soma de população e densidade populacional invertida!\n", cidade1nomeCidade);
+            } 
+            if ((cidade1populacao + densidadeInvertidac1) == (cidade2populacao + densidadeInvertidac2)) {
+            printf("Deu empate com relação à soma da população e densidade populacional invertida!");
+            } 
+            if ((cidade1populacao + densidadeInvertidac1) < (cidade2populacao + densidadeInvertidac2)) {
+            printf("%s tem a maior soma de população e densidade populacional invertida\n", cidade2nomeCidade); 
+            printf("%s venceu no quesito soma de população e densidade populacional invertida!\n", cidade2nomeCidade);
+            } 
+        }
+        if (escolhaJogador2 == 6) {
+        printf("Ok! Então vamos comparar população e Pib per capta de "); 
+        printf("%s ", cidade1nomeCidade); printf("e ");
+        printf("%s: \n", cidade2nomeCidade);
+        printf("População de "); printf("%s: ", cidade1nomeCidade);
+        printf("%u habitantes.\n", cidade1populacao);
+        printf("População de "); printf("%s: ", cidade2nomeCidade);
+        printf("%u habitantes\n", cidade2populacao);
+        printf("Pib per capta de "); printf("%s: ", cidade1nomeCidade);
+        printf("%.2f\n", pibPerCapitac1);
+        printf("Pib per capta de "); printf("%s: ", cidade2nomeCidade);
+        printf("%.2f\n", pibPerCapitac2);
+            if (cidade1populacao > cidade2populacao ) {
+            printf("%s tem a maior população\n", cidade1nomeCidade); 
+            printf("%s venceu no quesito população!\n", cidade1nomeCidade);
+            } 
+            if (cidade1populacao == cidade2populacao ) {
+            printf("Deu empate com relação à população!");
+            } 
+            if (cidade1populacao < cidade2populacao ) {
+            printf("%s tem a maior população\n", cidade2nomeCidade); 
+            printf("%s venceu no quesito população!\n", cidade2nomeCidade);
+            }
+            if (pibPerCapitac1 > pibPerCapitac2 ) {
+            printf("%s tem maior pib per capta\n", cidade1nomeCidade); 
+            printf("%s venceu no quesito pib per capta!\n", cidade1nomeCidade);
+            } 
+            if (pibPerCapitac1 == pibPerCapitac2 ) {
+            printf("Deu empate no quesito pib per capta!");
+            } 
+            if (pibPerCapitac1 < pibPerCapitac2 ){
+            printf("%s tem maior pib per capta\n", cidade2nomeCidade); 
+            printf("%s venceu no quesito pib per capta!\n", cidade2nomeCidade);
+            }
+            if ((cidade1populacao + pibPerCapitac1) > (cidade2populacao + pibPerCapitac2)) {
+            printf("%s tem a maior soma de população e pib per capta\n", cidade1nomeCidade); 
+            printf("%s venceu no quesito soma de população e pib per capta!\n", cidade1nomeCidade);
+            } 
+            if ((cidade1populacao + pibPerCapitac1) == (cidade2populacao + pibPerCapitac2)) {
+            printf("Deu empate com relação à soma da população e pib per capta!");
+            } 
+            if ((cidade1populacao + pibPerCapitac1) < (cidade2populacao + pibPerCapitac2)) {
+            printf("%s tem a maior soma de população e pib per capta\n", cidade2nomeCidade); 
+            printf("%s venceu no quesito soma de população e pib per capta!\n", cidade2nomeCidade);
+            }
+        }
+    break;
   
     case 2:
     printf("Opção 2:\n");
@@ -82,161 +306,1198 @@ switch (escolhaJogador1)
     printf("6.Pib per capta\n");
     printf("Escolha: ");
     scanf("%d", &escolhaJogador2);
-    break;
-
-    case 3:
-    printf("Opção 2:\n");
-    printf("1.População\n");
-    printf("2.Área\n");
-    printf("4.Número de Pontos Turísticos\n");
-    printf("5.Densidade Populacional Invertida\n");
-    printf("6.Pib per capta\n");
-    printf("Escolha: ");
-    scanf("%d", &escolhaJogador2);
-    break;
-
-    case 4:
-    printf("Opção 2:\n");
-    printf("1.População\n");
-    printf("2.Área\n");
-    printf("3.Pib\n");
-    printf("5.Densidade Populacional Invertida\n");
-    printf("6.Pib per capta\n");
-    printf("Escolha: ");
-    scanf("%d", &escolhaJogador2);
-    break;
-
-    case 5:
-    printf("Opção 2:\n");
-    printf("1.População\n");
-    printf("2.Área\n");
-    printf("3.Pib\n");
-    printf("4.Número de Pontos Turísticos\n");
-    printf("6.Pib per capta\n");
-    printf("Escolha: ");
-    scanf("%d", &escolhaJogador2);
-    break;
-
-    case 6:
-    printf("Opção 2:\n");
-    printf("1.População\n");
-    printf("2.Área\n");
-    printf("3.Pib\n");
-    printf("4.Número de Pontos Turísticos\n");
-    printf("5.Densidade Populacional Invertida\n");
-    printf("Escolha: ");
-    scanf("%d", &escolhaJogador2);
-    break;
-
-    default:
-    printf("Opção inválida. Tente novamente.\n");
-    break;
-
-    return 0;
-}
-
-
-// Resultados
-if escolhaJogador2
-
-
-
-// Escolhas e casos
-    {
-    case 1:
-    printf("População de "); printf("%s: ", cidade1nomeCidade);
-    printf("%u habitantes.\n", cidade1populacao);
-    printf("População de "); printf("%s: ", cidade2nomeCidade);
-    printf("%u habitantes\n", cidade2populacao);
-        if (cidade1populacao > cidade2populacao ) {
-        printf("%s tem a maior população\n", cidade1nomeCidade); printf("%s venceu!\n", cidade1nomeCidade);
-        } 
-        else if (cidade1populacao == cidade2populacao ) {
-        printf("Deu empate!");
-        } 
-        else {
-        printf("%s tem a maior população\n", cidade2nomeCidade); printf("%s venceu!\n", cidade2nomeCidade);
-        }
-        break;
-    
-    case 2:
+   
+    if (escolhaJogador2 == 1) {
+    printf("Ok! Então vamos comparar área e população de "); 
+    printf("%s ", cidade1nomeCidade); printf("e ");
+    printf("%s. \n", cidade2nomeCidade);
     printf("Área de "); printf("%s: ", cidade1nomeCidade);
     printf("%2.f km2\n", cidade1area);
     printf("Área de "); printf("%s: ", cidade2nomeCidade);
     printf("%2.f km2\n", cidade2area);
+    printf("População de "); printf("%s: ", cidade1nomeCidade);
+    printf("%u habitantes.\n", cidade1populacao);
+    printf("População de "); printf("%s: ", cidade2nomeCidade);
+    printf("%u habitantes\n", cidade2populacao);
         if (cidade1area > cidade2area ) {
-        printf("%s tem a maior área\n", cidade1nomeCidade); printf("%s venceu!\n", cidade1nomeCidade);
+        printf("%s tem a maior área\n", cidade1nomeCidade); 
+        printf("%s venceu no quesito área!\n", cidade1nomeCidade);
         } 
-        else if (cidade1area == cidade2area ) {
-        printf("Deu empate!");
-        } else {
-        printf("%s tem a maior área\n", cidade2nomeCidade); printf("%s venceu!\n", cidade2nomeCidade);
+        if (cidade1area == cidade2area ) {
+        printf("Deu empate com relação à área!");
+        } 
+        if (cidade1area < cidade2area ){
+        printf("%s tem a maior área\n", cidade2nomeCidade); 
+        printf("%s venceu no quesito área!\n", cidade2nomeCidade);
         }
-    break;
-
-    case 3:
+        if (cidade1populacao > cidade2populacao ) {
+        printf("%s tem a maior população\n", cidade1nomeCidade); 
+        printf("%s venceu no quesito população!\n", cidade1nomeCidade);
+        } 
+        if (cidade1populacao == cidade2populacao ) {
+        printf("Deu empate com relação à população!");
+        } 
+        if (cidade1populacao < cidade2populacao ) {
+        printf("%s tem a maior população\n", cidade2nomeCidade); 
+        printf("%s venceu no quesito população!\n", cidade2nomeCidade);
+        }
+        if ((cidade1area + cidade1populacao) > (cidade2area + cidade2populacao))
+        printf("%s tem a maior soma de área e população\n", cidade1nomeCidade); 
+        printf("%s venceu no quesito soma de área e população!\n", cidade1nomeCidade);
+        } 
+       if ((cidade1area + cidade1populacao) == (cidade2area + cidade2populacao)) {
+       printf("Deu empate com relação à soma da área e população!");
+       } 
+       else if ((cidade1area + cidade1populacao) < (cidade2area + cidade2populacao))
+       {
+        printf("%s tem a maior soma de área e população\n", cidade2nomeCidade); 
+        printf("%s venceu no quesito soma de área e população!\n", cidade2nomeCidade);
+        } 
+    
+    else if (escolhaJogador2 == 3) {
+    printf("Ok! Então vamos comparar área e PIB de "); 
+    printf("%s ", cidade1nomeCidade); printf("e ");
+    printf("%s. \n", cidade2nomeCidade);
+    printf("Área de "); printf("%s: ", cidade1nomeCidade);
+    printf("%2.f km2\n", cidade1area);
+    printf("Área de "); printf("%s: ", cidade2nomeCidade);
+    printf("%2.f km2\n", cidade2area);
     printf("PIB de "); printf("%s: ", cidade1nomeCidade);
     printf("%.2f bilhões de reais\n", cidade1PIB);
     printf("PIB de "); printf("%s: ", cidade2nomeCidade);
     printf("%.2f bilhões de reais\n", cidade2PIB);
-        if (cidade1PIB > cidade2PIB ) {
-        printf("%s tem o maior PIB\n", cidade1nomeCidade); printf("%s venceu!\n", cidade1nomeCidade);
+        if (cidade1area > cidade2area ) {
+        printf("%s tem a maior área\n", cidade1nomeCidade); 
+        printf("%s venceu no quesito área!\n", cidade1nomeCidade);
         } 
-        else if (cidade1PIB == cidade2PIB ) {
-        printf("Deu empate!");
-        } else {
-        printf("%s tem O maior PIB\n", cidade2nomeCidade); printf("%s venceu!\n", cidade2nomeCidade);
+        if (cidade1area == cidade2area ) {
+        printf("Deu empate com relação à área!");
+        } 
+        if (cidade1area < cidade2area ){
+        printf("%s tem a maior área\n", cidade2nomeCidade); 
+        printf("%s venceu no quesito área!\n", cidade2nomeCidade);
         }
+        if (cidade1PIB > cidade2PIB ) {
+        printf("%s tem o maior PIB\n", cidade1nomeCidade); 
+        printf("%s venceu no quesito PIB!\n", cidade1nomeCidade);
+        } 
+        if (cidade1PIB == cidade2PIB ) {
+        printf("Deu empate no quesito PIB!");
+        } 
+        if (cidade1PIB < cidade2PIB ){
+        printf("%s tem o maior PIB\n", cidade2nomeCidade); 
+        printf("%s venceu no quesito PIB!\n", cidade2nomeCidade);
+        }
+        if ((cidade1area + cidade1PIB) > (cidade2area + cidade2PIB))
+        printf("%s tem a maior soma de área e PIB\n", cidade1nomeCidade); 
+        printf("%s venceu no quesito soma de área e PIB!\n", cidade1nomeCidade);
+        } 
+       if ((cidade1area + cidade1PIB) == (cidade2area + cidade2PIB)) {
+       printf("Deu empate com relação à soma da área e PIB!");
+       } 
+       else if ((cidade1area + cidade1PIB) < (cidade2area + cidade2PIB))
+       {
+        printf("%s tem a maior soma de área e PIB\n", cidade2nomeCidade); 
+        printf("%s venceu no quesito soma de área e PIB!\n", cidade2nomeCidade);
+        } 
+    else if (escolhaJogador2 == 4) {
+    printf("Ok! Então vamos comparar área e Número de Pontos Turísticos de "); 
+    printf("%s ", cidade1nomeCidade); printf("e ");
+    printf("%s. \n", cidade2nomeCidade);
+    printf("Área de "); printf("%s: ", cidade1nomeCidade);
+    printf("%2.f km2\n", cidade1area);
+    printf("Área de "); printf("%s: ", cidade2nomeCidade);
+    printf("%2.f km2\n", cidade2area);
+    printf("Número de Pontos Turísticos de "); printf("%s: ", cidade1nomeCidade);
+    printf("%d\n", cidade1numeroPontosTuristicos);
+    printf("Número de Pontos Turísticos de "); printf("%s: ", cidade2nomeCidade);
+    printf("%d\n", cidade2numeroPontosTuristicos);
+        if (cidade1area > cidade2area ) {
+        printf("%s tem a maior área\n", cidade1nomeCidade); 
+        printf("%s venceu no quesito área!\n", cidade1nomeCidade);
+        } 
+        if (cidade1area == cidade2area ) {
+        printf("Deu empate com relação à área!");
+        } 
+        if (cidade1area < cidade2area ){
+        printf("%s tem a maior área\n", cidade2nomeCidade); 
+        printf("%s venceu no quesito área!\n", cidade2nomeCidade);
+        }
+        if (cidade1numeroPontosTuristicos > cidade2numeroPontosTuristicos ) {
+        printf("%s tem mais pontos turísticos\n", cidade1nomeCidade); 
+        printf("%s venceu no quesito pontos turísticos!\n", cidade1nomeCidade);
+        } 
+        if (cidade1numeroPontosTuristicos == cidade2numeroPontosTuristicos ) {
+        printf("Deu empate no quesito pontos turísticos!");
+        } 
+        if (cidade1numeroPontosTuristicos < cidade2numeroPontosTuristicos ){
+        printf("%s tem mais pontos turísticos\n", cidade2nomeCidade); 
+        printf("%s venceu no quesito pontos turísticos!\n", cidade2nomeCidade);
+        }
+        if ((cidade1area + cidade1numeroPontosTuristicos) > (cidade2area + cidade2numeroPontosTuristicos))
+        printf("%s tem a maior soma de área e pontos turísticos\n", cidade1nomeCidade); 
+        printf("%s venceu no quesito soma de área e pontos turísticos!\n", cidade1nomeCidade);
+        } 
+       if ((cidade1area + cidade1numeroPontosTuristicos) == (cidade2area + cidade2numeroPontosTuristicos)) {
+       printf("Deu empate com relação à soma da área e pontos turísticos!");
+       } 
+       else if ((cidade1area + cidade1numeroPontosTuristicos) < (cidade2area + cidade2numeroPontosTuristicos))
+       {
+        printf("%s tem a maior soma de área e pontos turísticos\n", cidade2nomeCidade); 
+        printf("%s venceu no quesito soma de área e pontos turísticos!\n", cidade2nomeCidade);
+        } 
+    
+    else if (escolhaJogador2 == 5) {
+    printf("Ok! Então vamos comparar área e Densidade Populacional Invertida de "); 
+    printf("%s ", cidade1nomeCidade); printf("e ");
+    printf("%s. \n", cidade2nomeCidade);
+    printf("Área de "); printf("%s: ", cidade1nomeCidade);
+    printf("%2.f km2\n", cidade1area);
+    printf("Área de "); printf("%s: ", cidade2nomeCidade);
+    printf("%2.f km2\n", cidade2area);
+    printf("Densidade Populacional Invertida de "); printf("%s: ", cidade1nomeCidade);
+    printf("%f\n", densidadeInvertidac1);
+    printf("Densidade Populacional Invertida de "); printf("%s: ", cidade2nomeCidade);
+    printf("%f\n", densidadeInvertidac2);
+        if (cidade1area > cidade2area ) {
+        printf("%s tem a maior área\n", cidade1nomeCidade); 
+        printf("%s venceu no quesito área!\n", cidade1nomeCidade);
+        } 
+        if (cidade1area == cidade2area ) {
+        printf("Deu empate com relação à área!");
+        } 
+        if (cidade1area < cidade2area ){
+        printf("%s tem a maior área\n", cidade2nomeCidade); 
+        printf("%s venceu no quesito área!\n", cidade2nomeCidade);
+        }
+        if (densidadeInvertidac1 > densidadeInvertidac2 ) {
+        printf("%s tem maior densidade populacional invertida\n", cidade1nomeCidade); 
+        printf("%s venceu no quesito densidade populacional invertida!\n", cidade1nomeCidade);
+        } 
+        if (densidadeInvertidac1 == densidadeInvertidac2 ) {
+        printf("Deu empate no quesito densidade populacional invertida!");
+        } 
+        if (densidadeInvertidac1 < densidadeInvertidac2 ){
+        printf("%s tem maior densidade populacional invertida\n", cidade2nomeCidade); 
+        printf("%s venceu no quesito densidade populacional invertida!\n", cidade2nomeCidade);
+        }
+        if ((cidade1area + densidadeInvertidac1) > (cidade2area + densidadeInvertidac2))
+        printf("%s tem a maior soma de área e densidade populacional invertida\n", cidade1nomeCidade); 
+        printf("%s venceu no quesito soma de área e densidade populacional invertida!\n", cidade1nomeCidade);
+        } 
+       if ((cidade1area + densidadeInvertidac1) == (cidade2area + densidadeInvertidac2)) {
+       printf("Deu empate com relação à soma da área e densidade populacional invertida!");
+       } 
+       else if ((cidade1area + densidadeInvertidac1) < (cidade2area + densidadeInvertidac2))
+       {
+        printf("%s tem a maior soma de área e densidade populacional invertida\n", cidade2nomeCidade); 
+        printf("%s venceu no quesito soma de área e densidade populacional invertida!\n", cidade2nomeCidade);
+        } 
+
+    else if (escolhaJogador2 == 6) {
+    printf("Ok! Então vamos comparar área e Pib per capta de "); 
+    printf("%s ", cidade1nomeCidade); printf("e ");
+    printf("%s. \n", cidade2nomeCidade);
+    printf("Área de "); printf("%s: ", cidade1nomeCidade);
+    printf("%2.f km2\n", cidade1area);
+    printf("Área de "); printf("%s: ", cidade2nomeCidade);
+    printf("%2.f km2\n", cidade2area);
+    printf("Pib per capta de "); printf("%s: ", cidade1nomeCidade);
+    printf("%.2f\n", pibPerCapitac1);
+    printf("Pib per capta de "); printf("%s: ", cidade2nomeCidade);
+    printf("%.2f\n", pibPerCapitac2);
+        if (cidade1area > cidade2area ) {
+        printf("%s tem a maior área\n", cidade1nomeCidade); 
+        printf("%s venceu no quesito área!\n", cidade1nomeCidade);
+        } 
+        if (cidade1area == cidade2area ) {
+        printf("Deu empate com relação à área!");
+        } 
+        if (cidade1area < cidade2area ){
+        printf("%s tem a maior área\n", cidade2nomeCidade); 
+        printf("%s venceu no quesito área!\n", cidade2nomeCidade);
+        }
+        if (pibPerCapitac1 > pibPerCapitac2 ) {
+        printf("%s tem maior pib per capta\n", cidade1nomeCidade); 
+        printf("%s venceu no quesito pib per capta!\n", cidade1nomeCidade);
+        } 
+        if (pibPerCapitac1 == pibPerCapitac2 ) {
+        printf("Deu empate no quesito pib per capta!");
+        } 
+        if (pibPerCapitac1 < pibPerCapitac2 ){
+        printf("%s tem maior pib per capta\n", cidade2nomeCidade); 
+        printf("%s venceu no quesito pib per capta!\n", cidade2nomeCidade);
+        }
+        if ((cidade1area + pibPerCapitac1) > (cidade2area + pibPerCapitac2))
+        printf("%s tem a maior soma de área e pib per capta\n", cidade1nomeCidade); 
+        printf("%s venceu no quesito soma de área e pib per capta!\n", cidade1nomeCidade);
+        } 
+       if ((cidade1area + pibPerCapitac1) == (cidade2area + pibPerCapitac2)) {
+       printf("Deu empate com relação à soma da área e pib per capta!");
+       } 
+       else if ((cidade1area + pibPerCapitac1) < (cidade2area + pibPerCapitac2))
+       {
+        printf("%s tem a maior soma de área e pib per capta\n", cidade2nomeCidade); 
+        printf("%s venceu no quesito soma de área e pib per capta!\n", cidade2nomeCidade);
+        } 
+
+    
+    
     break;
 
-    case 4:
-    printf("Número de pontos turísticos de "); printf ("%s: ", cidade1nomeCidade);
+    case 3:
+    printf("Opção 2:\n");
+    printf("1.População\n");
+    printf("2.Área\n");
+    printf("4.Número de Pontos Turísticos\n");
+    printf("5.Densidade Populacional Invertida\n");
+    printf("6.Pib per capta\n");
+    printf("Escolha: ");
+    scanf("%d", &escolhaJogador2);
+   
+    if (escolhaJogador2 == 1) {
+    printf("Ok! Então vamos comparar população e PIB de "); 
+    printf("%s ", cidade1nomeCidade); printf("e ");
+    printf("%s: \n", cidade2nomeCidade);
+    printf("População de "); printf("%s: ", cidade1nomeCidade);
+    printf("%u habitantes.\n", cidade1populacao);
+    printf("População de "); printf("%s: ", cidade2nomeCidade);
+    printf("%u habitantes\n", cidade2populacao);
+    printf("PIB de "); printf("%s: ", cidade1nomeCidade);
+    printf("%.2f bilhões de reais\n", cidade1PIB);
+    printf("PIB de "); printf("%s: ", cidade2nomeCidade);
+    printf("%.2f bilhões de reais\n", cidade2PIB);
+        if (cidade1populacao > cidade2populacao ) {
+            printf("%s tem a maior população\n", cidade1nomeCidade); 
+            printf("%s venceu no quesito população!\n", cidade1nomeCidade);
+            } 
+            if (cidade1populacao == cidade2populacao ) {
+            printf("Deu empate com relação à população!");
+            } 
+            if (cidade1populacao < cidade2populacao ) {
+            printf("%s tem a maior população\n", cidade2nomeCidade); 
+            printf("%s venceu no quesito população!\n", cidade2nomeCidade);
+            }
+            if (cidade1PIB > cidade2PIB ) {
+            printf("%s tem o maior PIB\n", cidade1nomeCidade); 
+            printf("%s venceu no quesito PIB!\n", cidade1nomeCidade);
+            } 
+            if (cidade1PIB == cidade2PIB ) {
+            printf("Deu empate no quesito PIB!");
+            } 
+            if (cidade1PIB < cidade2PIB ){
+            printf("%s tem O maior PIB\n", cidade2nomeCidade); 
+            printf("%s venceu no quesito PIB!\n", cidade2nomeCidade);
+            }
+            if ((cidade1populacao + cidade1PIB) > (cidade2populacao + cidade2PIB))
+            printf("%s tem a maior soma de população e PIB\n", cidade1nomeCidade); 
+            printf("%s venceu no quesito soma de população e PIB!\n", cidade1nomeCidade);
+            } 
+           if ((cidade1populacao + cidade1PIB) == (cidade2populacao + cidade2PIB)) {
+           printf("Deu empate com relação à soma da populção e PIB!");
+           } 
+           else if ((cidade1populacao + cidade1PIB) < (cidade2populacao + cidade2PIB))
+           {
+            printf("%s tem a maior soma de população e PIB\n", cidade2nomeCidade); 
+            printf("%s venceu no quesito soma de população e PIB!\n", cidade2nomeCidade);
+            } 
+    
+    else if (escolhaJogador2 == 2) {
+    printf("Ok! Então vamos comparar PIB e área de "); 
+    printf("%s ", cidade1nomeCidade); printf("e ");
+    printf("%s. \n", cidade2nomeCidade);
+    printf("PIB de "); printf("%s: ", cidade1nomeCidade);
+    printf("%.2f bilhões de reais\n", cidade1PIB);
+    printf("PIB de "); printf("%s: ", cidade2nomeCidade);
+    printf("%.2f bilhões de reais\n", cidade2PIB);
+    printf("Área de "); printf("%s: ", cidade1nomeCidade);
+    printf("%2.f km2\n", cidade1area);
+    printf("Área de "); printf("%s: ", cidade2nomeCidade);
+    printf("%2.f km2\n", cidade2area);
+        if (cidade1PIB > cidade2PIB ) {
+        printf("%s tem o maior PIB\n", cidade1nomeCidade); 
+        printf("%s venceu no quesito PIB!\n", cidade1nomeCidade);
+        } 
+        if (cidade1PIB == cidade2PIB ) {
+        printf("Deu empate no quesito PIB!");
+        } 
+        if (cidade1PIB < cidade2PIB ){
+        printf("%s tem o maior PIB\n", cidade2nomeCidade); 
+        printf("%s venceu no quesito PIB!\n", cidade2nomeCidade);
+        }
+        if (cidade1area > cidade2area ) {
+        printf("%s tem a maior área\n", cidade1nomeCidade); 
+        printf("%s venceu no quesito área!\n", cidade1nomeCidade);
+        } 
+        if (cidade1area == cidade2area ) {
+        printf("Deu empate com relação à área!");
+        } 
+        if (cidade1area < cidade2area ){
+        printf("%s tem a maior área\n", cidade2nomeCidade); 
+        printf("%s venceu no quesito área!\n", cidade2nomeCidade);
+        }
+        if ((cidade1PIB + cidade1area) > (cidade2PIB + cidade2area))
+        printf("%s tem a maior soma de PIB e área\n", cidade1nomeCidade); 
+        printf("%s venceu no quesito soma de PIB e área!\n", cidade1nomeCidade);
+        } 
+       if ((cidade1PIB + cidade1area) == (cidade2PIB + cidade2area)) {
+       printf("Deu empate com relação à soma do PIB e área!");
+       } 
+       if ((cidade1PIB + cidade1area) < (cidade2PIB + cidade2area)){
+        printf("%s tem a maior soma de PIB e área\n", cidade2nomeCidade); 
+        printf("%s venceu no quesito soma de PIB e área!\n", cidade2nomeCidade);
+        } 
+
+
+    else if (escolhaJogador2 == 4) {
+    printf("Ok! Então vamos comparar PIB e Número de Pontos Turísticos de "); 
+    printf("%s ", cidade1nomeCidade); printf("e ");
+    printf("%s. \n", cidade2nomeCidade);
+    printf("PIB de "); printf("%s: ", cidade1nomeCidade);
+    printf("%.2f bilhões de reais\n", cidade1PIB);
+    printf("PIB de "); printf("%s: ", cidade2nomeCidade);
+    printf("%.2f bilhões de reais\n", cidade2PIB);
+    printf("Número de Pontos Turísticos de "); printf("%s: ", cidade1nomeCidade);
     printf("%d\n", cidade1numeroPontosTuristicos);
-    printf("Número de pontos turísticos de "); printf ("%s: ", cidade2nomeCidade);
+    printf("Número de Pontos Turísticos de "); printf("%s: ", cidade2nomeCidade);
     printf("%d\n", cidade2numeroPontosTuristicos);
+        if (cidade1PIB > cidade2PIB ) {
+        printf("%s tem o maior PIB\n", cidade1nomeCidade); 
+        printf("%s venceu no quesito PIB!\n", cidade1nomeCidade);
+        } 
+        if (cidade1PIB == cidade2PIB ) {
+        printf("Deu empate no quesito PIB!");
+        } 
+        if (cidade1PIB < cidade2PIB ){
+        printf("%s tem o maior PIB\n", cidade2nomeCidade); 
+        printf("%s venceu no quesito PIB!\n", cidade2nomeCidade);
+        }
         if (cidade1numeroPontosTuristicos > cidade2numeroPontosTuristicos ) {
-        printf("%s tem o maior números de Pontos Turísticos\n", cidade1nomeCidade); printf("%s venceu!\n", cidade1nomeCidade);
+        printf("%s tem mais pontos turísticos\n", cidade1nomeCidade); 
+        printf("%s venceu no quesito pontos turísticos!\n", cidade1nomeCidade);
+        } 
+        if (cidade1numeroPontosTuristicos == cidade2numeroPontosTuristicos ) {
+        printf("Deu empate no quesito pontos turísticos!");
+        } 
+        if (cidade1numeroPontosTuristicos < cidade2numeroPontosTuristicos ){
+        printf("%s tem mais pontos turísticos\n", cidade2nomeCidade); 
+        printf("%s venceu no quesito pontos turísticos!\n", cidade2nomeCidade);
         }
-        else if (cidade1numeroPontosTuristicos == cidade2numeroPontosTuristicos ) {
-        printf("Deu empate!");
-        } else {
-        printf("%s tem o maior números de Pontos Turísticos\n", cidade2nomeCidade); printf("%s venceu!\n", cidade2nomeCidade);
+        if ((cidade1PIB + cidade1numeroPontosTuristicos) > (cidade2PIB + cidade2numeroPontosTuristicos))
+        printf("%s tem a maior soma de PIB e pontos turísticos\n", cidade1nomeCidade); 
+        printf("%s venceu no quesito soma de PIB e pontos turísticos!\n", cidade1nomeCidade);
+        } 
+       if ((cidade1PIB + cidade1numeroPontosTuristicos) == (cidade2PIB + cidade2numeroPontosTuristicos)) {
+       printf("Deu empate com relação à soma do PIB e pontos turísticos!");
+       } 
+       if ((cidade1PIB + cidade1numeroPontosTuristicos) < (cidade2PIB + cidade2numeroPontosTuristicos)){
+        printf("%s tem a maior soma de PIB e pontos turísticos\n", cidade2nomeCidade); 
+        printf("%s venceu no quesito soma de PIB e pontos turísticos!\n", cidade2nomeCidade);
+        } 
+
+    else if (escolhaJogador2 == 5) {
+    printf("Ok! Então vamos comparar PIB e Densidade Populacional Invertida de "); 
+    printf("%s ", cidade1nomeCidade); printf("e ");
+    printf("%s. \n", cidade2nomeCidade);
+    printf("PIB de "); printf("%s: ", cidade1nomeCidade);
+    printf("%.2f bilhões de reais\n", cidade1PIB);
+    printf("PIB de "); printf("%s: ", cidade2nomeCidade);
+    printf("%.2f bilhões de reais\n", cidade2PIB);
+    printf("Densidade Populacional Invertida de "); printf("%s: ", cidade1nomeCidade);
+    printf("%f\n", densidadeInvertidac1);
+    printf("Densidade Populacional Invertida de "); printf("%s: ", cidade2nomeCidade);
+    printf("%f\n", densidadeInvertidac2);
+        if (cidade1PIB > cidade2PIB ) {
+        printf("%s tem o maior PIB\n", cidade1nomeCidade); 
+        printf("%s venceu no quesito PIB!\n", cidade1nomeCidade);
+        } 
+        if (cidade1PIB == cidade2PIB ) {
+        printf("Deu empate no quesito PIB!");
+        } 
+        if (cidade1PIB < cidade2PIB ){
+        printf("%s tem o maior PIB\n", cidade2nomeCidade); 
+        printf("%s venceu no quesito PIB!\n", cidade2nomeCidade);
         }
+        if (densidadeInvertidac1 > densidadeInvertidac2 ) {
+        printf("%s tem maior densidade populacional invertida\n", cidade1nomeCidade); 
+        printf("%s venceu no quesito densidade populacional invertida!\n", cidade1nomeCidade);
+        } 
+        if (densidadeInvertidac1 == densidadeInvertidac2 ) {
+        printf("Deu empate no quesito densidade populacional invertida!");
+        } 
+        if (densidadeInvertidac1 < densidadeInvertidac2 ){
+        printf("%s tem maior densidade populacional invertida\n", cidade2nomeCidade); 
+        printf("%s venceu no quesito densidade populacional invertida!\n", cidade2nomeCidade);
+        }
+        if ((cidade1PIB + densidadeInvertidac1) > (cidade2PIB + densidadeInvertidac2))
+        printf("%s tem a maior soma de PIB e densidade populacional invertida\n", cidade1nomeCidade); 
+        printf("%s venceu no quesito soma de PIB e densidade populacional invertida!\n", cidade1nomeCidade);
+        } 
+       if ((cidade1PIB + densidadeInvertidac1) == (cidade2PIB + densidadeInvertidac2)) {
+       printf("Deu empate com relação à soma do PIB e densidade populacional invertida!");
+       } 
+       if ((cidade1PIB + densidadeInvertidac1) < (cidade2PIB + densidadeInvertidac2)) {
+        printf("%s tem a maior soma de PIB e densidade populacional invertida\n", cidade2nomeCidade); 
+        printf("%s venceu no quesito soma de PIB e densidade populacional invertida!\n", cidade2nomeCidade);
+        } 
+
+    else if (escolhaJogador2 == 6) {
+    printf("Ok! Então vamos comparar PIB e Pib per capta de "); 
+    printf("%s ", cidade1nomeCidade); printf("e ");
+    printf("%s. \n", cidade2nomeCidade);
+    printf("PIB de "); printf("%s: ", cidade1nomeCidade);
+    printf("%.2f bilhões de reais\n", cidade1PIB);
+    printf("PIB de "); printf("%s: ", cidade2nomeCidade);
+    printf("%.2f bilhões de reais\n", cidade2PIB);
+    printf("Pib per capta de "); printf("%s: ", cidade1nomeCidade);
+    printf("%.2f\n", pibPerCapitac1);
+    printf("Pib per capta de "); printf("%s: ", cidade2nomeCidade);
+    printf("%.2f\n", pibPerCapitac2);
+        if (cidade1PIB > cidade2PIB ) {
+        printf("%s tem o maior PIB\n", cidade1nomeCidade); 
+        printf("%s venceu no quesito PIB!\n", cidade1nomeCidade);
+        } 
+        if (cidade1PIB == cidade2PIB ) {
+        printf("Deu empate no quesito PIB!");
+        } 
+        if (cidade1PIB < cidade2PIB ){
+        printf("%s tem o maior PIB\n", cidade2nomeCidade); 
+        printf("%s venceu no quesito PIB!\n", cidade2nomeCidade);
+        }
+        if (pibPerCapitac1 > pibPerCapitac2 ) {
+        printf("%s tem maior pib per capta\n", cidade1nomeCidade); 
+        printf("%s venceu no quesito pib per capta!\n", cidade1nomeCidade);
+        } 
+        if (pibPerCapitac1 == pibPerCapitac2 ) {
+        printf("Deu empate no quesito pib per capta!");
+        } 
+        if (pibPerCapitac1 < pibPerCapitac2 ){
+        printf("%s tem maior pib per capta\n", cidade2nomeCidade); 
+        printf("%s venceu no quesito pib per capta!\n", cidade2nomeCidade);
+        }
+        if ((cidade1PIB + pibPerCapitac1) > (cidade2PIB + pibPerCapitac2))
+        printf("%s tem a maior soma de PIB e pib per capta\n", cidade1nomeCidade); 
+        printf("%s venceu no quesito soma de PIB e pib per capta!\n", cidade1nomeCidade);
+        } 
+       if ((cidade1PIB + pibPerCapitac1) == (cidade2PIB + pibPerCapitac2)) {
+    break;
+    
+    case 4:
+    printf("Opção 2:\n");
+    printf("1.População\n");
+    printf("2.Área\n");
+    printf("3.Pib\n");
+    printf("5.Densidade Populacional Invertida\n");
+    printf("6.Pib per capta\n");
+    printf("Escolha: ");
+    scanf("%d", &escolhaJogador2);
+    
+    if (escolhaJogador2 == 1) {
+    printf("Ok! Então vamos comparar Número de Pontos Turísticos e população de "); 
+    printf("%s ", cidade1nomeCidade); printf("e ");
+    printf("%s. \n", cidade2nomeCidade);
+    printf("Número de Pontos Turísticos de "); printf("%s: ", cidade1nomeCidade);
+    printf("%d\n", cidade1numeroPontosTuristicos);
+    printf("Número de Pontos Turísticos de "); printf("%s: ", cidade2nomeCidade);
+    printf("%d\n", cidade2numeroPontosTuristicos);
+    printf("População de "); printf("%s: ", cidade1nomeCidade);
+    printf("%u habitantes.\n", cidade1populacao);
+    printf("População de "); printf("%s: ", cidade2nomeCidade);
+    printf("%u habitantes\n", cidade2populacao);
+        if (cidade1numeroPontosTuristicos > cidade2numeroPontosTuristicos ) {
+        printf("%s tem mais pontos turísticos\n", cidade1nomeCidade); 
+        printf("%s venceu no quesito pontos turísticos!\n", cidade1nomeCidade);
+        } 
+        if (cidade1numeroPontosTuristicos == cidade2numeroPontosTuristicos ) {
+        printf("Deu empate no quesito pontos turísticos!");
+        } 
+        if (cidade1numeroPontosTuristicos < cidade2numeroPontosTuristicos ){
+        printf("%s tem mais pontos turísticos\n", cidade2nomeCidade); 
+        printf("%s venceu no quesito pontos turísticos!\n", cidade2nomeCidade);
+        }
+        if (cidade1populacao > cidade2populacao ) {
+        printf("%s tem a maior população\n", cidade1nomeCidade); 
+        printf("%s venceu no quesito população!\n", cidade1nomeCidade);
+        } 
+        if (cidade1populacao == cidade2populacao ) {
+        printf("Deu empate com relação à população!");
+        } 
+        if (cidade1populacao < cidade2populacao ) {
+        printf("%s tem a maior população\n", cidade2nomeCidade); 
+        printf("%s venceu no quesito população!\n", cidade2nomeCidade);
+        }
+        if ((cidade1numeroPontosTuristicos + cidade1populacao) > (cidade2numeroPontosTuristicos + cidade2populacao))
+        printf("%s tem a maior soma de pontos turísticos e população\n", cidade1nomeCidade); 
+        printf("%s venceu no quesito soma de pontos turísticos e população!\n", cidade1nomeCidade);
+        } 
+       if ((cidade1numeroPontosTuristicos + cidade1populacao) == (cidade2numeroPontosTuristicos + cidade2populacao)) {
+       printf("Deu empate com relação à soma de pontos turísticos e população!");
+       } 
+       if ((cidade1numeroPontosTuristicos + cidade1populacao) < (cidade2numeroPontosTuristicos + cidade2populacao)) {
+        printf("%s tem a maior soma de pontos turísticos e população\n", cidade2nomeCidade); 
+        printf("%s venceu no quesito soma de pontos turísticos e população!\n", cidade2nomeCidade);
+        } 
+    else if (escolhaJogador2 == 2) {
+    printf("Ok! Então vamos comparar Número de Pontos Turísticos e área de "); 
+    printf("%s ", cidade1nomeCidade); printf("e ");
+    printf("%s. \n", cidade2nomeCidade);
+    printf("Número de Pontos Turísticos de "); printf("%s: ", cidade1nomeCidade);
+    printf("%d\n", cidade1numeroPontosTuristicos);
+    printf("Número de Pontos Turísticos de "); printf("%s: ", cidade2nomeCidade);
+    printf("%d\n", cidade2numeroPontosTuristicos);
+    printf("Área de "); printf("%s: ", cidade1nomeCidade);
+    printf("%2.f km2\n", cidade1area);
+    printf("Área de "); printf("%s: ", cidade2nomeCidade);
+    printf("%2.f km2\n", cidade2area);
+        if (cidade1numeroPontosTuristicos > cidade2numeroPontosTuristicos ) {
+        printf("%s tem mais pontos turísticos\n", cidade1nomeCidade); 
+        printf("%s venceu no quesito pontos turísticos!\n", cidade1nomeCidade);
+        } 
+        if (cidade1numeroPontosTuristicos == cidade2numeroPontosTuristicos ) {
+        printf("Deu empate no quesito pontos turísticos!");
+        } 
+        if (cidade1numeroPontosTuristicos < cidade2numeroPontosTuristicos ){
+        printf("%s tem mais pontos turísticos\n", cidade2nomeCidade); 
+        printf("%s venceu no quesito pontos turísticos!\n", cidade2nomeCidade);
+        }
+        if (cidade1area > cidade2area ) {
+        printf("%s tem a maior área\n", cidade1nomeCidade); 
+        printf("%s venceu no quesito área!\n", cidade1nomeCidade);
+        } 
+        if (cidade1area == cidade2area ) {
+        printf("Deu empate com relação à área!");
+        } 
+        if (cidade1area < cidade2area ){
+        printf("%s tem a maior área\n", cidade2nomeCidade); 
+        printf("%s venceu no quesito área!\n", cidade2nomeCidade);
+        }
+        if ((cidade1numeroPontosTuristicos + cidade1area) > (cidade2numeroPontosTuristicos + cidade2area))
+        printf("%s tem a maior soma de pontos turísticos e área\n", cidade1nomeCidade); 
+        printf("%s venceu no quesito soma de pontos turísticos e área!\n", cidade1nomeCidade);
+        } 
+       if ((cidade1numeroPontosTuristicos + cidade1area) == (cidade2numeroPontosTuristicos + cidade2area)) {
+       printf("Deu empate com relação à soma de pontos turísticos e área!");
+       } 
+       if ((cidade1numeroPontosTuristicos + cidade1area) < (cidade2numeroPontosTuristicos + cidade2area)){
+        printf("%s tem a maior soma de pontos turísticos e área\n", cidade2nomeCidade); 
+        printf("%s venceu no quesito soma de pontos turísticos e área!\n", cidade2nomeCidade);
+        } 
+    else if (escolhaJogador2 == 3) {
+    printf("Ok! Então vamos comparar Número de Pontos Turísticos e PIB de "); 
+    printf("%s ", cidade1nomeCidade); printf("e ");
+    printf("%s. \n", cidade2nomeCidade);
+    printf("Número de Pontos Turísticos de "); printf("%s: ", cidade1nomeCidade);
+    printf("%d\n", cidade1numeroPontosTuristicos);
+    printf("Número de Pontos Turísticos de "); printf("%s: ", cidade2nomeCidade);
+    printf("%d\n", cidade2numeroPontosTuristicos);
+    printf("PIB de "); printf("%s: ", cidade1nomeCidade);
+    printf("%.2f bilhões de reais\n", cidade1PIB);
+    printf("PIB de "); printf("%s: ", cidade2nomeCidade);
+    printf("%.2f bilhões de reais\n", cidade2PIB);
+        if (cidade1numeroPontosTuristicos > cidade2numeroPontosTuristicos ) {
+        printf("%s tem mais pontos turísticos\n", cidade1nomeCidade); 
+        printf("%s venceu no quesito pontos turísticos!\n", cidade1nomeCidade);
+        } 
+        if (cidade1numeroPontosTuristicos == cidade2numeroPontosTuristicos ) {
+        printf("Deu empate no quesito pontos turísticos!");
+        } 
+        if (cidade1numeroPontosTuristicos < cidade2numeroPontosTuristicos ){
+        printf("%s tem mais pontos turísticos\n", cidade2nomeCidade); 
+        printf("%s venceu no quesito pontos turísticos!\n", cidade2nomeCidade);
+        }
+        if (cidade1PIB > cidade2PIB ) {
+        printf("%s tem o maior PIB\n", cidade1nomeCidade); 
+        printf("%s venceu no quesito PIB!\n", cidade1nomeCidade);
+        } 
+        if (cidade1PIB == cidade2PIB ) {
+        printf("Deu empate no quesito PIB!");
+        } 
+        if (cidade1PIB < cidade2PIB ){
+        printf("%s tem o maior PIB\n", cidade2nomeCidade); 
+        printf("%s venceu no quesito PIB!\n", cidade2nomeCidade);
+        }
+        if ((cidade1numeroPontosTuristicos + cidade1PIB) > (cidade2numeroPontosTuristicos + cidade2PIB))
+        printf("%s tem a maior soma de pontos turísticos e PIB\n", cidade1nomeCidade); 
+        printf("%s venceu no quesito soma de pontos turísticos e PIB!\n", cidade1nomeCidade);
+        } 
+       if ((cidade1numeroPontosTuristicos + cidade1PIB) == (cidade2numeroPontosTuristicos + cidade2PIB)) {
+       printf("Deu empate com relação à soma de pontos turísticos e PIB!");
+       } 
+       if ((cidade1numeroPontosTuristicos + cidade1PIB) < (cidade2numeroPontosTuristicos + cidade2PIB)){
+        printf("%s tem a maior soma de pontos turísticos e PIB\n", cidade2nomeCidade); 
+        printf("%s venceu no quesito soma de pontos turísticos e PIB!\n", cidade2nomeCidade);
+        } 
+    else if (escolhaJogador2 == 5) {
+    printf("Ok! Então vamos comparar Número de Pontos Turísticos e Densidade Populacional Invertida de "); 
+    printf("%s ", cidade1nomeCidade); printf("e ");
+    printf("%s. \n", cidade2nomeCidade);
+    printf("Número de Pontos Turísticos de "); printf("%s: ", cidade1nomeCidade);
+    printf("%d\n", cidade1numeroPontosTuristicos);
+    printf("Número de Pontos Turísticos de "); printf("%s: ", cidade2nomeCidade);
+    printf("%d\n", cidade2numeroPontosTuristicos);
+    printf("Densidade Populacional Invertida de "); printf("%s: ", cidade1nomeCidade);
+    printf("%f\n", densidadeInvertidac1);
+    printf("Densidade Populacional Invertida de "); printf("%s: ", cidade2nomeCidade);
+    printf("%f\n", densidadeInvertidac2);
+        if (cidade1numeroPontosTuristicos > cidade2numeroPontosTuristicos ) {
+        printf("%s tem mais pontos turísticos\n", cidade1nomeCidade); 
+        printf("%s venceu no quesito pontos turísticos!\n", cidade1nomeCidade);
+        } 
+        if (cidade1numeroPontosTuristicos == cidade2numeroPontosTuristicos ) {
+        printf("Deu empate no quesito pontos turísticos!");
+        } 
+        if (cidade1numeroPontosTuristicos < cidade2numeroPontosTuristicos ){
+        printf("%s tem mais pontos turísticos\n", cidade2nomeCidade); 
+        printf("%s venceu no quesito pontos turísticos!\n", cidade2nomeCidade);
+        }
+        if (densidadeInvertidac1 > densidadeInvertidac2 ) {
+        printf("%s tem maior densidade populacional invertida\n", cidade1nomeCidade); 
+        printf("%s venceu no quesito densidade populacional invertida!\n", cidade1nomeCidade);
+        } 
+        if (densidadeInvertidac1 == densidadeInvertidac2 ) {
+        printf("Deu empate no quesito densidade populacional invertida!");
+        } 
+        if (densidadeInvertidac1 < densidadeInvertidac2 ){
+        printf("%s tem maior densidade populacional invertida\n", cidade2nomeCidade); 
+        printf("%s venceu no quesito densidade populacional invertida!\n", cidade2nomeCidade);
+        }
+        if ((cidade1numeroPontosTuristicos + densidadeInvertidac1) > (cidade2numeroPontosTuristicos + densidadeInvertidac2))
+        printf("%s tem a maior soma de pontos turísticos e densidade populacional invertida\n", cidade1nomeCidade); 
+        printf("%s venceu no quesito soma de pontos turísticos e densidade populacional invertida!\n", cidade1nomeCidade);
+        } 
+       if ((cidade1numeroPontosTuristicos + densidadeInvertidac1) == (cidade2numeroPontosTuristicos + densidadeInvertidac2)) {
+       printf("Deu empate com relação à soma de pontos turísticos e densidade populacional invertida!");
+       } 
+       else {
+        printf("%s tem a maior soma de pontos turísticos e densidade populacional invertida\n", cidade2nomeCidade); 
+        printf("%s venceu no quesito soma de pontos turísticos e densidade populacional invertida!\n", cidade2nomeCidade);
+        } 
+    if ((cidade1numeroPontosTuristicos + densidadeInvertidac1) < (cidade2numeroPontosTuristicos + densidadeInvertidac2)){
+    printf("Ok! Então vamos comparar Número de Pontos Turísticos e Pib per capta de "); 
+    printf("%s ", cidade1nomeCidade); printf("e ");
+    printf("%s. \n", cidade2nomeCidade);
+    printf("Número de Pontos Turísticos de "); printf("%s: ", cidade1nomeCidade);
+    printf("%d\n", cidade1numeroPontosTuristicos);
+    printf("Número de Pontos Turísticos de "); printf("%s: ", cidade2nomeCidade);
+    printf("%d\n", cidade2numeroPontosTuristicos);
+    printf("Pib per capta de "); printf("%s: ", cidade1nomeCidade);
+    printf("%.2f\n", pibPerCapitac1);
+    printf("Pib per capta de "); printf("%s: ", cidade2nomeCidade);
+    printf("%.2f\n", pibPerCapitac2);
+        if (cidade1numeroPontosTuristicos > cidade2numeroPontosTuristicos ) {
+        printf("%s tem mais pontos turísticos\n", cidade1nomeCidade); 
+        printf("%s venceu no quesito pontos turísticos!\n", cidade1nomeCidade);
+        } 
+        if (cidade1numeroPontosTuristicos == cidade2numeroPontosTuristicos ) {
+        printf("Deu empate no quesito pontos turísticos!");
+        } 
+        if (cidade1numeroPontosTuristicos < cidade2numeroPontosTuristicos ){
+        printf("%s tem mais pontos turísticos\n", cidade2nomeCidade); 
+        printf("%s venceu no quesito pontos turísticos!\n", cidade2nomeCidade);
+        }
+        if (pibPerCapitac1 > pibPerCapitac2 ) {
+        printf("%s tem maior pib per capta\n", cidade1nomeCidade); 
+        printf("%s venceu no quesito pib per capta!\n", cidade1nomeCidade);
+        } 
+        if (pibPerCapitac1 == pibPerCapitac2 ) {
+        printf("Deu empate no quesito pib per capta!");
+        } 
+        if (pibPerCapitac1 < pibPerCapitac2 ){
+        printf("%s tem maior pib per capta\n", cidade2nomeCidade); 
+        printf("%s venceu no quesito pib per capta!\n", cidade2nomeCidade);
+        }
+        if ((cidade1numeroPontosTuristicos + pibPerCapitac1) > (cidade2numeroPontosTuristicos + pibPerCapitac2))
+        printf("%s tem a maior soma de pontos turísticos e pib per capta\n", cidade1nomeCidade); 
+        printf("%s venceu no quesito soma de pontos turísticos e pib per capta!\n", cidade1nomeCidade);
+        } 
+       if ((cidade1numeroPontosTuristicos + pibPerCapitac1) == (cidade2numeroPontosTuristicos + pibPerCapitac2)) {
+       printf("Deu empate com relação à soma de pontos turísticos e pib per capta!");
+       } 
+       else {
+        printf("%s tem a maior soma de pontos turísticos e pib per capta\n", cidade2nomeCidade); 
+        printf("%s venceu no quesito soma de pontos turísticos e pib per capta!\n", cidade2nomeCidade);
+        } 
     break;
 
     case 5:
-    printf("Densidade Populacional de "); printf ("%s: ", cidade1nomeCidade);
-    printf("%.2f habitantes por km2\n", densidadec1);
-    printf("Densidade Populacional de "); printf ("%s: ", cidade2nomeCidade);
-    printf("%.2f habitantes por km2\n", densidadec2);
+    printf("Opção 2:\n");
+    printf("1.População\n");
+    printf("2.Área\n");
+    printf("3.Pib\n");
+    printf("4.Número de Pontos Turísticos\n");
+    printf("6.Pib per capta\n");
+    printf("Escolha: ");
+    scanf("%d", &escolhaJogador2);
+    
+    if (escolhaJogador2 == 1) {
+    printf("Ok! Então vamos comparar Densidade Populacional Invertida e população de "); 
+    printf("%s ", cidade1nomeCidade); printf("e ");
+    printf("%s. \n", cidade2nomeCidade);
+    printf("Densidade Populacional Invertida de "); printf("%s: ", cidade1nomeCidade);
+    printf("%f\n", densidadeInvertidac1);
+    printf("Densidade Populacional Invertida de "); printf("%s: ", cidade2nomeCidade);
+    printf("%f\n", densidadeInvertidac2);
+    printf("População de "); printf("%s: ", cidade1nomeCidade);
+    printf("%u habitantes.\n", cidade1populacao);
+    printf("População de "); printf("%s: ", cidade2nomeCidade);
+    printf("%u habitantes\n", cidade2populacao);
         if (densidadeInvertidac1 > densidadeInvertidac2 ) {
-        printf("%s tem a menor densidade populacional\n", cidade1nomeCidade); printf("%s venceu!\n", cidade1nomeCidade);
+        printf("%s tem maior densidade populacional invertida\n", cidade1nomeCidade); 
+        printf("%s venceu no quesito densidade populacional invertida!\n", cidade1nomeCidade);
+        } 
+        if (densidadeInvertidac1 == densidadeInvertidac2 ) {
+        printf("Deu empate no quesito densidade populacional invertida!");
+        } 
+        if (densidadeInvertidac1 < densidadeInvertidac2 ){
+        printf("%s tem maior densidade populacional invertida\n", cidade2nomeCidade); 
+        printf("%s venceu no quesito densidade populacional invertida!\n", cidade2nomeCidade);
         }
-        else if (densidadeInvertidac1 == densidadeInvertidac2 ) {
-        printf("Deu empate!");
-        } else {
-        printf("%s tem a menor Densidade Populacional\n", cidade2nomeCidade); printf("%s venceu!\n", cidade2nomeCidade);
+        if (cidade1populacao > cidade2populacao ) {
+        printf("%s tem a maior população\n", cidade1nomeCidade); 
+        printf("%s venceu no quesito população!\n", cidade1nomeCidade);
+        } 
+        if (cidade1populacao == cidade2populacao ) {
+        printf("Deu empate com relação à população!");
+        } 
+        if (cidade1populacao < cidade2populacao ) {
+        printf("%s tem a maior população\n", cidade2nomeCidade); 
+        printf("%s venceu no quesito população!\n", cidade2nomeCidade);
         }
+        if ((densidadeInvertidac1 + cidade1populacao) > (densidadeInvertidac2 + cidade2populacao))
+        printf("%s tem a maior soma de densidade populacional invertida e população\n", cidade1nomeCidade); 
+        printf("%s venceu no quesito soma de densidade populacional invertida e população!\n", cidade1nomeCidade);
+        } 
+       if ((densidadeInvertidac1 + cidade1populacao) == (densidadeInvertidac2 + cidade2populacao)) {
+       printf("Deu empate com relação à soma de densidade populacional invertida e população!");
+       } 
+       if ((densidadeInvertidac1 + cidade1populacao) < (densidadeInvertidac2 + cidade2populacao)) {
+        printf("%s tem a maior soma de densidade populacional invertida e população\n", cidade2nomeCidade); 
+        printf("%s venceu no quesito soma de densidade populacional invertida e população!\n", cidade2nomeCidade);
+        } 
+    else if (escolhaJogador2 == 2) {
+    printf("Ok! Então vamos comparar Densidade Populacional Invertida e área de "); 
+    printf("%s ", cidade1nomeCidade); printf("e ");
+    printf("%s. \n", cidade2nomeCidade);
+    printf("Densidade Populacional Invertida de "); printf("%s: ", cidade1nomeCidade);
+    printf("%f\n", densidadeInvertidac1);
+    printf("Densidade Populacional Invertida de "); printf("%s: ", cidade2nomeCidade);
+    printf("%f\n", densidadeInvertidac2);
+    printf("Área de "); printf("%s: ", cidade1nomeCidade);
+    printf("%2.f km2\n", cidade1area);
+    printf("Área de "); printf("%s: ", cidade2nomeCidade);
+    printf("%2.f km2\n", cidade2area);
+        if (densidadeInvertidac1 > densidadeInvertidac2 ) {
+        printf("%s tem maior densidade populacional invertida\n", cidade1nomeCidade); 
+        printf("%s venceu no quesito densidade populacional invertida!\n", cidade1nomeCidade);
+        } 
+        if (densidadeInvertidac1 == densidadeInvertidac2 ) {
+        printf("Deu empate no quesito densidade populacional invertida!");
+        } 
+        if (densidadeInvertidac1 < densidadeInvertidac2 ){
+        printf("%s tem maior densidade populacional invertida\n", cidade2nomeCidade); 
+        printf("%s venceu no quesito densidade populacional invertida!\n", cidade2nomeCidade);
+        }
+        if (cidade1area > cidade2area ) {
+        printf("%s tem a maior área\n", cidade1nomeCidade); 
+        printf("%s venceu no quesito área!\n", cidade1nomeCidade);
+        } 
+        if (cidade1area == cidade2area ) {
+        printf("Deu empate com relação à área!");
+        } 
+        if (cidade1area < cidade2area ){
+        printf("%s tem a maior área\n", cidade2nomeCidade); 
+        printf("%s venceu no quesito área!\n", cidade2nomeCidade);
+        }
+        if ((densidadeInvertidac1 + cidade1area) > (densidadeInvertidac2 + cidade2area))
+        printf("%s tem a maior soma de densidade populacional invertida e área\n", cidade1nomeCidade); 
+        printf("%s venceu no quesito soma de densidade populacional invertida e área!\n", cidade1nomeCidade);
+        } 
+       if ((densidadeInvertidac1 + cidade1area) == (densidadeInvertidac2 + cidade2area)) {
+       printf("Deu empate com relação à soma de densidade populacional invertida e área!");
+       } 
+  
+else if (escolhaJogador2 == 3) {
+    printf("Ok! Então vamos comparar Densidade Populacional Invertida e PIB de "); 
+    printf("%s ", cidade1nomeCidade); printf("e ");
+    printf("%s. \n", cidade2nomeCidade);
+    printf("Densidade Populacional Invertida de "); printf("%s: ", cidade1nomeCidade);
+    printf("%f\n", densidadeInvertidac1);
+    printf("Densidade Populacional Invertida de "); printf("%s: ", cidade2nomeCidade);
+    printf("%f\n", densidadeInvertidac2);
+    printf("PIB de "); printf("%s: ", cidade1nomeCidade);
+    printf("%.2f bilhões de reais\n", cidade1PIB);
+    printf("PIB de "); printf("%s: ", cidade2nomeCidade);
+    printf("%.2f bilhões de reais\n", cidade2PIB);
+        if (densidadeInvertidac1 > densidadeInvertidac2 ) {
+        printf("%s tem maior densidade populacional invertida\n", cidade1nomeCidade); 
+        printf("%s venceu no quesito densidade populacional invertida!\n", cidade1nomeCidade);
+        } 
+        if (densidadeInvertidac1 == densidadeInvertidac2 ) {
+        printf("Deu empate no quesito densidade populacional invertida!");
+        } 
+        if (densidadeInvertidac1 < densidadeInvertidac2 ){
+        printf("%s tem maior densidade populacional invertida\n", cidade2nomeCidade); 
+        printf("%s venceu no quesito densidade populacional invertida!\n", cidade2nomeCidade);
+        }
+        if (cidade1PIB > cidade2PIB ) {
+        printf("%s tem o maior PIB\n", cidade1nomeCidade); 
+        printf("%s venceu no quesito PIB!\n", cidade1nomeCidade);
+        } 
+        if (cidade1PIB == cidade2PIB ) {
+        printf("Deu empate no quesito PIB!");
+        } 
+        if (cidade1PIB < cidade2PIB ){
+        printf("%s tem o maior PIB\n", cidade2nomeCidade); 
+        printf("%s venceu no quesito PIB!\n", cidade2nomeCidade);
+        }
+        if ((densidadeInvertidac1 + cidade1PIB) > (densidadeInvertidac2 + cidade2PIB))
+        printf("%s tem a maior soma de densidade populacional invertida e PIB\n", cidade1nomeCidade); 
+        printf("%s venceu no quesito soma de densidade populacional invertida e PIB!\n", cidade1nomeCidade);
+        } 
+       if ((densidadeInvertidac1 + cidade1PIB) == (densidadeInvertidac2 + cidade2PIB)) {
+       printf("Deu empate com relação à soma de densidade populacional invertida e PIB!");
+       } 
+       if ((densidadeInvertidac1 + cidade1PIB) < (densidadeInvertidac2 + cidade2PIB)) {
+        printf("%s tem a maior soma de densidade populacional invertida e PIB\n", cidade2nomeCidade); 
+        printf("%s venceu no quesito soma de densidade populacional invertida e PIB!\n", cidade2nomeCidade);
+        } 
+    else if (escolhaJogador2 == 4) {
+    printf("Ok! Então vamos comparar Densidade Populacional Invertida e Número de Pontos Turísticos de "); 
+    printf("%s ", cidade1nomeCidade); printf("e ");
+    printf("%s. \n", cidade2nomeCidade);
+    printf("Densidade Populacional Invertida de "); printf("%s: ", cidade1nomeCidade);
+    printf("%f\n", densidadeInvertidac1);
+    printf("Densidade Populacional Invertida de "); printf("%s: ", cidade2nomeCidade);
+    printf("%f\n", densidadeInvertidac2);
+    printf("Número de Pontos Turísticos de "); printf("%s: ", cidade1nomeCidade);
+    printf("%d\n", cidade1numeroPontosTuristicos);
+    printf("Número de Pontos Turísticos de "); printf("%s: ", cidade2nomeCidade);
+    printf("%d\n", cidade2numeroPontosTuristicos);
+        if (densidadeInvertidac1 > densidadeInvertidac2 ) {
+        printf("%s tem maior densidade populacional invertida\n", cidade1nomeCidade); 
+        printf("%s venceu no quesito densidade populacional invertida!\n", cidade1nomeCidade);
+        } 
+        if (densidadeInvertidac1 == densidadeInvertidac2 ) {
+        printf("Deu empate no quesito densidade populacional invertida!");
+        } 
+        if (densidadeInvertidac1 < densidadeInvertidac2 ){
+        printf("%s tem maior densidade populacional invertida\n", cidade2nomeCidade); 
+        printf("%s venceu no quesito densidade populacional invertida!\n", cidade2nomeCidade);
+        }
+        if (cidade1numeroPontosTuristicos > cidade2numeroPontosTuristicos ) {
+        printf("%s tem mais pontos turísticos\n", cidade1nomeCidade); 
+        printf("%s venceu no quesito pontos turísticos!\n", cidade1nomeCidade);
+        } 
+        if (cidade1numeroPontosTuristicos == cidade2numeroPontosTuristicos ) {
+        printf("Deu empate no quesito pontos turísticos!");
+        } 
+        if (cidade1numeroPontosTuristicos < cidade2numeroPontosTuristicos ){
+        printf("%s tem mais pontos turísticos\n", cidade2nomeCidade); 
+        printf("%s venceu no quesito pontos turísticos!\n", cidade2nomeCidade);
+        }
+        if ((densidadeInvertidac1 + cidade1numeroPontosTuristicos) > (densidadeInvertidac2 + cidade2numeroPontosTuristicos))
+        printf("%s tem a maior soma de densidade populacional invertida e pontos turísticos\n", cidade1nomeCidade); 
+        printf("%s venceu no quesito soma de densidade populacional invertida e pontos turísticos!\n", cidade1nomeCidade);
+        } 
+       if ((densidadeInvertidac1 + cidade1numeroPontosTuristicos) == (densidadeInvertidac2 + cidade2numeroPontosTuristicos)) {
+       printf("Deu empate com relação à soma de densidade populacional invertida e pontos turísticos!");
+       } 
+       if ((densidadeInvertidac1 + cidade1numeroPontosTuristicos) < (densidadeInvertidac2 + cidade2numeroPontosTuristicos)){
+        printf("%s tem a maior soma de densidade populacional invertida e pontos turísticos\n", cidade2nomeCidade); 
+        printf("%s venceu no quesito soma de densidade populacional invertida e pontos turísticos!\n", cidade2nomeCidade);
+        } 
+
+    else {
+    printf("Ok! Então vamos comparar Densidade Populacional Invertida e Pib per capta de "); 
+    printf("%s ", cidade1nomeCidade); printf("e ");
+    printf("%s. \n", cidade2nomeCidade);
+    printf("Densidade Populacional Invertida de "); printf("%s: ", cidade1nomeCidade);
+    printf("%f\n", densidadeInvertidac1);
+    printf("Densidade Populacional Invertida de "); printf("%s: ", cidade2nomeCidade);
+    printf("%f\n", densidadeInvertidac2);
+    printf("Pib per capta de "); printf("%s: ", cidade1nomeCidade);
+    printf("%.2f\n", pibPerCapitac1);
+    printf("Pib per capta de "); printf("%s: ", cidade2nomeCidade);
+    printf("%.2f\n", pibPerCapitac2);
+        if (densidadeInvertidac1 > densidadeInvertidac2 ) {
+        printf("%s tem maior densidade populacional invertida\n", cidade1nomeCidade); 
+        printf("%s venceu no quesito densidade populacional invertida!\n", cidade1nomeCidade);
+        } 
+        if (densidadeInvertidac1 == densidadeInvertidac2 ) {
+        printf("Deu empate no quesito densidade populacional invertida!");
+        } 
+        if (densidadeInvertidac1 < densidadeInvertidac2 ){
+        printf("%s tem maior densidade populacional invertida\n", cidade2nomeCidade); 
+        printf("%s venceu no quesito densidade populacional invertida!\n", cidade2nomeCidade);
+        }
+        if (pibPerCapitac1 > pibPerCapitac2 ) {
+        printf("%s tem maior pib per capta\n", cidade1nomeCidade); 
+        printf("%s venceu no quesito pib per capta!\n", cidade1nomeCidade);
+        } 
+        if (pibPerCapitac1 == pibPerCapitac2 ) {
+        printf("Deu empate no quesito pib per capta!");
+        } 
+        if (pibPerCapitac1 < pibPerCapitac2 ){
+        printf("%s tem maior pib per capta\n", cidade2nomeCidade); 
+        printf("%s venceu no quesito pib per capta!\n", cidade2nomeCidade);
+        }
+        if ((densidadeInvertidac1 + pibPerCapitac1) > (densidadeInvertidac2 + pibPerCapitac2))
+        printf("%s tem a maior soma de densidade populacional invertida e pib per capta\n", cidade1nomeCidade); 
+        printf("%s venceu no quesito soma de densidade populacional invertida e pib per capta!\n", cidade1nomeCidade);
+        } 
+       if ((densidadeInvertidac1 + pibPerCapitac1) == (densidadeInvertidac2 + pibPerCapitac2)) {
+       printf("Deu empate com relação à soma de densidade populacional invertida e pib per capta!");
+       } 
+       else {
+        printf("%s tem a maior soma de densidade populacional invertida e pib per capta\n", cidade2nomeCidade); 
+        printf("%s venceu no quesito soma de densidade populacional invertida e pib per capta!\n", cidade2nomeCidade);
+
     break;
 
     case 6:
-    printf("PIB per capita de "); printf("%s: ", cidade1nomeCidade);
-    printf("%.2f reais (R$) por habitante\n", pibPerCapitac1);
-    printf("PIB per capita de "); printf("%s: ", cidade2nomeCidade);
-    printf("%.2f reais (R$) por habitante\n", pibPerCapitac2);
-        if (pibPerCapitac1 > pibPerCapitac2 ) {
-        printf("%s tem o maior PIB per capta\n", cidade1nomeCidade); printf("%s venceu!\n", cidade1nomeCidade);
-        }
-        else if (pibPerCapitac1 == pibPerCapitac2 ) {
-        printf("Deu empate!");
-        } else {
-        printf("%s tem o maior PIB per capta\n", cidade2nomeCidade); printf("%s venceu!\n", cidade2nomeCidade);
-        }
-    break;
+    printf("Opção 2:\n");
+    printf("1.População\n");
+    printf("2.Área\n");
+    printf("3.Pib\n");
+    printf("4.Número de Pontos Turísticos\n");
+    printf("5.Densidade Populacional Invertida\n");
+    printf("Escolha: ");
+    scanf("%d", &escolhaJogador2);
     
-    default:
-      printf("Opção inválida. Tente novamente.\n");
+    if (escolhaJogador2 == 1) {
+    printf("Ok! Então vamos comparar Pib per capta e população de "); 
+    printf("%s ", cidade1nomeCidade); printf("e ");
+    printf("%s. \n", cidade2nomeCidade);
+    printf("Pib per capta de "); printf("%s: ", cidade1nomeCidade);
+    printf("%.2f\n", pibPerCapitac1);
+    printf("Pib per capta de "); printf("%s: ", cidade2nomeCidade);
+    printf("%.2f\n", pibPerCapitac2);
+    printf("População de "); printf("%s: ", cidade1nomeCidade);
+    printf("%u habitantes.\n", cidade1populacao);
+    printf("População de "); printf("%s: ", cidade2nomeCidade);
+    printf("%u habitantes\n", cidade2populacao);
+        if (pibPerCapitac1 > pibPerCapitac2 ) {
+        printf("%s tem maior pib per capta\n", cidade1nomeCidade); 
+        printf("%s venceu no quesito pib per capta!\n", cidade1nomeCidade);
+        } 
+        if (pibPerCapitac1 == pibPerCapitac2 ) {
+        printf("Deu empate no quesito pib per capta!");
+        } 
+        if (pibPerCapitac1 < pibPerCapitac2 ){
+        printf("%s tem maior pib per capta\n", cidade2nomeCidade); 
+        printf("%s venceu no quesito pib per capta!\n", cidade2nomeCidade);
+        }
+        if (cidade1populacao > cidade2populacao ) {
+        printf("%s tem a maior população\n", cidade1nomeCidade); 
+        printf("%s venceu no quesito população!\n", cidade1nomeCidade);
+        } 
+        if (cidade1populacao == cidade2populacao ) {
+        printf("Deu empate com relação à população!");
+        } 
+        if (cidade1populacao < cidade2populacao ) {
+        printf("%s tem a maior população\n", cidade2nomeCidade); 
+        printf("%s venceu no quesito população!\n", cidade2nomeCidade);
+        }
+        if ((pibPerCapitac1 + cidade1populacao) > (pibPerCapitac2 + cidade2populacao))
+        printf("%s tem a maior soma de pib per capta e população\n", cidade1nomeCidade); 
+        printf("%s venceu no quesito soma de pib per capta e população!\n", cidade1nomeCidade);
+        } 
+       if ((pibPerCapitac1 + cidade1populacao) == (pibPerCapitac2 + cidade2populacao)) {
+       printf("Deu empate com relação à soma de pib per capta e população!");
+       } 
+       if ((pibPerCapitac1 + cidade1populacao) < (pibPerCapitac2 + cidade2populacao)) {
+        printf("%s tem a maior soma de pib per capta e população\n", cidade2nomeCidade); 
+        printf("%s venceu no quesito soma de pib per capta e população!\n", cidade2nomeCidade);
+        } 
+    else if (escolhaJogador2 == 2) {
+    printf("Ok! Então vamos comparar Pib per capta e área de "); 
+    printf("%s ", cidade1nomeCidade); printf("e ");
+    printf("%s. \n", cidade2nomeCidade);
+    printf("Pib per capta de "); printf("%s: ", cidade1nomeCidade);
+    printf("%.2f\n", pibPerCapitac1);
+    printf("Pib per capta de "); printf("%s: ", cidade2nomeCidade);
+    printf("%.2f\n", pibPerCapitac2);
+    printf("Área de "); printf("%s: ", cidade1nomeCidade);
+    printf("%2.f km2\n", cidade1area);
+    printf("Área de "); printf("%s: ", cidade2nomeCidade);
+    printf("%2.f km2\n", cidade2area);
+        if (pibPerCapitac1 > pibPerCapitac2 ) {
+        printf("%s tem maior pib per capta\n", cidade1nomeCidade); 
+        printf("%s venceu no quesito pib per capta!\n", cidade1nomeCidade);
+        } 
+        if (pibPerCapitac1 == pibPerCapitac2 ) {
+        printf("Deu empate no quesito pib per capta!");
+        } 
+        if (pibPerCapitac1 < pibPerCapitac2 ){
+        printf("%s tem maior pib per capta\n", cidade2nomeCidade); 
+        printf("%s venceu no quesito pib per capta!\n", cidade2nomeCidade);
+        }
+        if (cidade1area > cidade2area ) {
+        printf("%s tem a maior área\n", cidade1nomeCidade); 
+        printf("%s venceu no quesito área!\n", cidade1nomeCidade);
+        } 
+        if (cidade1area == cidade2area ) {
+        printf("Deu empate com relação à área!");
+        } 
+        if (cidade1area < cidade2area ){
+        printf("%s tem a maior área\n", cidade2nomeCidade); 
+        printf("%s venceu no quesito área!\n", cidade2nomeCidade);
+        }
+        if ((pibPerCapitac1 + cidade1area) > (pibPerCapitac2 + cidade2area))
+        printf("%s tem a maior soma de pib per capta e área\n", cidade1nomeCidade); 
+        printf("%s venceu no quesito soma de pib per capta e área!\n", cidade1nomeCidade);
+        } 
+       if ((pibPerCapitac1 + cidade1area) == (pibPerCapitac2 + cidade2area)) {
+       printf("Deu empate com relação à soma de pib per capta e área!");
+       } 
+       if ((pibPerCapitac1 + cidade1area) < (pibPerCapitac2 + cidade2area)) {
+        printf("%s tem a maior soma de pib per capta e área\n", cidade2nomeCidade); 
+        printf("%s venceu no quesito soma de pib per capta e área!\n", cidade2nomeCidade);
+        } 
+    else if (escolhaJogador2 == 3) {
+    printf("Ok! Então vamos comparar Pib per capta e PIB de "); 
+    printf("%s ", cidade1nomeCidade); printf("e ");
+    printf("%s. \n", cidade2nomeCidade);
+    printf("Pib per capta de "); printf("%s: ", cidade1nomeCidade);
+    printf("%.2f\n", pibPerCapitac1);
+    printf("Pib per capta de "); printf("%s: ", cidade2nomeCidade);
+    printf("%.2f\n", pibPerCapitac2);
+    printf("PIB de "); printf("%s: ", cidade1nomeCidade);
+    printf("%.2f bilhões de reais\n", cidade1PIB);
+    printf("PIB de "); printf("%s: ", cidade2nomeCidade);
+    printf("%.2f bilhões de reais\n", cidade2PIB);
+        if (pibPerCapitac1 > pibPerCapitac2 ) {
+        printf("%s tem maior pib per capta\n", cidade1nomeCidade); 
+        printf("%s venceu no quesito pib per capta!\n", cidade1nomeCidade);
+        } 
+        if (pibPerCapitac1 == pibPerCapitac2 ) {
+        printf("Deu empate no quesito pib per capta!");
+        } 
+        if (pibPerCapitac1 < pibPerCapitac2 ){
+        printf("%s tem maior pib per capta\n", cidade2nomeCidade); 
+        printf("%s venceu no quesito pib per capta!\n", cidade2nomeCidade);
+        }
+        if (cidade1PIB > cidade2PIB ) {
+        printf("%s tem o maior PIB\n", cidade1nomeCidade); 
+        printf("%s venceu no quesito PIB!\n", cidade1nomeCidade);
+        } 
+        if (cidade1PIB == cidade2PIB ) {
+        printf("Deu empate no quesito PIB!");
+        } 
+        if (cidade1PIB < cidade2PIB ){
+        printf("%s tem o maior PIB\n", cidade2nomeCidade); 
+        printf("%s venceu no quesito PIB!\n", cidade2nomeCidade);
+        }
+        if ((pibPerCapitac1 + cidade1PIB) > (pibPerCapitac2 + cidade2PIB))
+        printf("%s tem a maior soma de pib per capta e PIB\n", cidade1nomeCidade); 
+        printf("%s venceu no quesito soma de pib per capta e PIB!\n", cidade1nomeCidade);
+        } 
+       if ((pibPerCapitac1 + cidade1PIB) == (pibPerCapitac2 + cidade2PIB)) {
+       printf("Deu empate com relação à soma de pib per capta e PIB!");
+       } 
+       if ((pibPerCapitac1 + cidade1PIB) < (pibPerCapitac2 + cidade2PIB)){
+        printf("%s tem a maior soma de pib per capta e PIB\n", cidade2nomeCidade); 
+        printf("%s venceu no quesito soma de pib per capta e PIB!\n", cidade2nomeCidade);
+        } 
+    else if (escolhaJogador2 == 4) {
+    printf("Ok! Então vamos comparar Pib per capta e Número de Pontos Turísticos de "); 
+    printf("%s ", cidade1nomeCidade); printf("e ");
+    printf("%s. \n", cidade2nomeCidade);
+    printf("Pib per capta de "); printf("%s: ", cidade1nomeCidade);
+    printf("%.2f\n", pibPerCapitac1);
+    printf("Pib per capta de "); printf("%s: ", cidade2nomeCidade);
+    printf("%.2f\n", pibPerCapitac2);
+    printf("Número de Pontos Turísticos de "); printf("%s: ", cidade1nomeCidade);
+    printf("%d\n", cidade1numeroPontosTuristicos);
+    printf("Número de Pontos Turísticos de "); printf("%s: ", cidade2nomeCidade);
+    printf("%d\n", cidade2numeroPontosTuristicos);
+        if (pibPerCapitac1 > pibPerCapitac2 ) {
+        printf("%s tem maior pib per capta\n", cidade1nomeCidade); 
+        printf("%s venceu no quesito pib per capta!\n", cidade1nomeCidade);
+        } 
+        if (pibPerCapitac1 == pibPerCapitac2 ) {
+        printf("Deu empate no quesito pib per capta!");
+        } 
+        if (pibPerCapitac1 < pibPerCapitac2 ){
+        printf("%s tem maior pib per capta\n", cidade2nomeCidade); 
+        printf("%s venceu no quesito pib per capta!\n", cidade2nomeCidade);
+        }
+        if (cidade1numeroPontosTuristicos > cidade2numeroPontosTuristicos ) {
+        printf("%s tem mais pontos turísticos\n", cidade1nomeCidade); 
+        printf("%s venceu no quesito pontos turísticos!\n", cidade1nomeCidade);
+        } 
+        if (cidade1numeroPontosTuristicos == cidade2numeroPontosTuristicos ) {
+        printf("Deu empate no quesito pontos turísticos!");
+        } 
+        if (cidade1numeroPontosTuristicos < cidade2numeroPontosTuristicos ){
+        printf("%s tem mais pontos turísticos\n", cidade2nomeCidade); 
+        printf("%s venceu no quesito pontos turísticos!\n", cidade2nomeCidade);
+        }
+        if ((pibPerCapitac1 + cidade1numeroPontosTuristicos) > (pibPerCapitac2 + cidade2numeroPontosTuristicos))
+        printf("%s tem a maior soma de pib per capta e pontos turísticos\n", cidade1nomeCidade); 
+        printf("%s venceu no quesito soma de pib per capta e pontos turísticos!\n", cidade1nomeCidade);
+        } 
+       if ((pibPerCapitac1 + cidade1numeroPontosTuristicos) == (pibPerCapitac2 + cidade2numeroPontosTuristicos)) {
+       printf("Deu empate com relação à soma de pib per capta e pontos turísticos!");
+       } 
+       if ((pibPerCapitac1 + cidade1numeroPontosTuristicos) < (pibPerCapitac2 + cidade2numeroPontosTuristicos)){
+        printf("%s tem a maior soma de pib per capta e pontos turísticos\n", cidade2nomeCidade); 
+        printf("%s venceu no quesito soma de pib per capta e pontos turísticos!\n", cidade2nomeCidade);
+        }
 
+    else {
+    printf("Ok! Então vamos comparar Pib per capta e Densidade Populacional Invertida de "); 
+    printf("%s ", cidade1nomeCidade); printf("e ");
+    printf("%s. \n", cidade2nomeCidade);
+    printf("Pib per capta de "); printf("%s: ", cidade1nomeCidade);
+    printf("%.2f\n", pibPerCapitac1);
+    printf("Pib per capta de "); printf("%s: ", cidade2nomeCidade);
+    printf("%.2f\n", pibPerCapitac2);
+    printf("Densidade Populacional Invertida de "); printf("%s: ", cidade1nomeCidade);
+    printf("%f\n", densidadeInvertidac1);
+    printf("Densidade Populacional Invertida de "); printf("%s: ", cidade2nomeCidade);
+    printf("%f\n", densidadeInvertidac2);
+        if (pibPerCapitac1 > pibPerCapitac2 ) {
+        printf("%s tem maior pib per capta\n", cidade1nomeCidade); 
+        printf("%s venceu no quesito pib per capta!\n", cidade1nomeCidade);
+        } 
+        if (pibPerCapitac1 == pibPerCapitac2 ) {
+        printf("Deu empate no quesito pib per capta!");
+        } 
+        if (pibPerCapitac1 < pibPerCapitac2 ){
+        printf("%s tem maior pib per capta\n", cidade2nomeCidade); 
+        printf("%s venceu no quesito pib per capta!\n", cidade2nomeCidade);
+        }
+        if (densidadeInvertidac1 > densidadeInvertidac2 ) {
+        printf("%s tem maior densidade populacional invertida\n", cidade1nomeCidade); 
+        printf("%s venceu no quesito densidade populacional invertida!\n", cidade1nomeCidade);
+        } 
+        if (densidadeInvertidac1 == densidadeInvertidac2 ) {
+        printf("Deu empate no quesito densidade populacional invertida!");
+        } 
+        if (densidadeInvertidac1 < densidadeInvertidac2 ){
+        printf("%s tem maior densidade populacional invertida\n", cidade2nomeCidade); 
+        printf("%s venceu no quesito densidade populacional invertida!\n", cidade2nomeCidade);
+        }
+        if ((pibPerCapitac1 + densidadeInvertidac1) > (pibPerCapitac2 + densidadeInvertidac2))
+        printf("%s tem a maior soma de pib per capta e densidade populacional invertida\n", cidade1nomeCidade); 
+        printf("%s venceu no quesito soma de pib per capta e densidade populacional invertida!\n", cidade1nomeCidade);
+        } 
+       if ((pibPerCapitac1 + densidadeInvertidac1) == (pibPerCapitac2 + densidadeInvertidac2)) {
+       printf("Deu empate com relação à soma de pib per capta e densidade populacional invertida!");
+       } 
+       else {
+        printf("%s tem a maior soma de pib per capta e densidade populacional invertida\n", cidade2nomeCidade); 
+        printf("%s venceu no quesito soma de pib per capta e densidade populacional invertida!\n", cidade2nomeCidade);
+        } 
+       }
+    
+    break;
+
+    default:
+    printf("Opção inválida. Tente novamente.\n");
+       }
+    break;
     }
-return 0;
+    return 0;
 }
